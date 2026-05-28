@@ -21,29 +21,29 @@ layout: default
     </p>
     <div class="portfolio-hero__links">
       <!-- ⚠️ UPDATE: replace href values with your real profile URLs -->
-      <a href="https://linkedin.com/in/YOUR-PROFILE" class="portfolio-hero__link portfolio-hero__link--primary" target="_blank" rel="noopener noreferrer">🔗 LinkedIn</a>
+      <a href="#" class="portfolio-hero__link portfolio-hero__link--primary">🔗 LinkedIn</a>
       <a href="https://github.com/cuongnm5" class="portfolio-hero__link portfolio-hero__link--secondary" target="_blank" rel="noopener noreferrer">GitHub</a>
-      <a href="https://scholar.google.com/citations?user=YOUR-ID" class="portfolio-hero__link portfolio-hero__link--secondary" target="_blank" rel="noopener noreferrer">Google Scholar</a>
+      <a href="#" class="portfolio-hero__link portfolio-hero__link--secondary">Google Scholar</a>
       <a href="mailto:s.cuongnm5@gmail.com" class="portfolio-hero__link portfolio-hero__link--secondary">✉️ Email</a>
     </div>
   </div>
 
   <!-- TAB BAR -->
   <div class="portfolio-tabs" role="tablist" aria-label="Portfolio sections">
-    <button class="portfolio-tab active" data-tab="experience" role="tab" aria-selected="true" aria-controls="panel-experience">💼 EXPERIENCE</button>
-    <button class="portfolio-tab" data-tab="projects" role="tab" aria-selected="false" aria-controls="panel-projects">🚀 PROJECTS</button>
-    <button class="portfolio-tab" data-tab="certifications" role="tab" aria-selected="false" aria-controls="panel-certifications">📜 CERTIFICATIONS</button>
-    <button class="portfolio-tab" data-tab="publications" role="tab" aria-selected="false" aria-controls="panel-publications">📚 PUBLICATIONS</button>
-    <button class="portfolio-tab" data-tab="volunteering" role="tab" aria-selected="false" aria-controls="panel-volunteering">🤝 VOLUNTEERING</button>
-    <button class="portfolio-tab" data-tab="awards" role="tab" aria-selected="false" aria-controls="panel-awards">🏆 AWARDS</button>
+    <button id="tab-experience" class="portfolio-tab active" data-tab="experience" role="tab" aria-selected="true" aria-controls="panel-experience">💼 EXPERIENCE</button>
+    <button id="tab-projects" class="portfolio-tab" data-tab="projects" role="tab" aria-selected="false" aria-controls="panel-projects">🚀 PROJECTS</button>
+    <button id="tab-certifications" class="portfolio-tab" data-tab="certifications" role="tab" aria-selected="false" aria-controls="panel-certifications">📜 CERTIFICATIONS</button>
+    <button id="tab-publications" class="portfolio-tab" data-tab="publications" role="tab" aria-selected="false" aria-controls="panel-publications">📚 PUBLICATIONS</button>
+    <button id="tab-volunteering" class="portfolio-tab" data-tab="volunteering" role="tab" aria-selected="false" aria-controls="panel-volunteering">🤝 VOLUNTEERING</button>
+    <button id="tab-awards" class="portfolio-tab" data-tab="awards" role="tab" aria-selected="false" aria-controls="panel-awards">🏆 AWARDS</button>
   </div>
 
   <!-- CONTENT PANELS -->
   <div class="portfolio-content">
 
     <!-- EXPERIENCE -->
-    <div id="panel-experience" class="tab-panel active" role="tabpanel">
-      <p class="section-title">Career Experience</p>
+    <div id="panel-experience" class="tab-panel active" role="tabpanel" aria-labelledby="tab-experience" tabindex="0">
+      <h2 class="section-title">Career Experience</h2>
       <ul class="timeline">
         <!-- ⚠️ UPDATE: replace with real job entries, newest first.
              Use timeline-track--secondary for older roles (renders amber dot).
@@ -74,8 +74,8 @@ layout: default
     </div>
 
     <!-- PROJECTS -->
-    <div id="panel-projects" class="tab-panel" role="tabpanel">
-      <p class="section-title">Projects</p>
+    <div id="panel-projects" class="tab-panel" role="tabpanel" aria-labelledby="tab-projects" tabindex="0">
+      <h2 class="section-title">Projects</h2>
       <div class="card-grid">
         <!-- ⚠️ UPDATE: replace with real projects.
              Add portfolio-card--amber for alternating border color.
@@ -109,8 +109,8 @@ layout: default
     </div>
 
     <!-- CERTIFICATIONS -->
-    <div id="panel-certifications" class="tab-panel" role="tabpanel">
-      <p class="section-title">Licenses &amp; Certifications</p>
+    <div id="panel-certifications" class="tab-panel" role="tabpanel" aria-labelledby="tab-certifications" tabindex="0">
+      <h2 class="section-title">Licenses &amp; Certifications</h2>
       <div class="card-grid">
         <!-- ⚠️ UPDATE: replace with real certifications.
              Pick badge emoji: 🎓 📜 🏅 🔐 ☁️
@@ -138,8 +138,8 @@ layout: default
     </div>
 
     <!-- PUBLICATIONS -->
-    <div id="panel-publications" class="tab-panel" role="tabpanel">
-      <p class="section-title">Publications</p>
+    <div id="panel-publications" class="tab-panel" role="tabpanel" aria-labelledby="tab-publications" tabindex="0">
+      <h2 class="section-title">Publications</h2>
       <ul class="pub-list">
         <!-- ⚠️ UPDATE: replace with real publications.
              Copy <li class="pub-item"> to add more entries. -->
@@ -164,8 +164,8 @@ layout: default
     </div>
 
     <!-- VOLUNTEERING -->
-    <div id="panel-volunteering" class="tab-panel" role="tabpanel">
-      <p class="section-title">Volunteering</p>
+    <div id="panel-volunteering" class="tab-panel" role="tabpanel" aria-labelledby="tab-volunteering" tabindex="0">
+      <h2 class="section-title">Volunteering</h2>
       <ul class="timeline">
         <!-- ⚠️ UPDATE: replace with real volunteering entries.
              Same template as Experience. Copy <li class="timeline-item"> to add more. -->
@@ -184,8 +184,8 @@ layout: default
     </div>
 
     <!-- AWARDS -->
-    <div id="panel-awards" class="tab-panel" role="tabpanel">
-      <p class="section-title">Honors &amp; Awards</p>
+    <div id="panel-awards" class="tab-panel" role="tabpanel" aria-labelledby="tab-awards" tabindex="0">
+      <h2 class="section-title">Honors &amp; Awards</h2>
       <ul class="award-list">
         <!-- ⚠️ UPDATE: replace with real awards, newest first.
              Pick icon: 🥇 🥈 🎖️ 🏅 🏆 🌟
@@ -214,20 +214,45 @@ layout: default
   <!-- TAB SWITCHING JS -->
   <script>
     (function () {
-      var tabs = document.querySelectorAll('.portfolio-tab');
-      tabs.forEach(function (tab) {
+      var tabs = Array.from(document.querySelectorAll('.portfolio-tab'));
+      var panels = document.querySelector('.portfolio-content');
+
+      function activateTab(tab) {
+        tabs.forEach(function (t) {
+          t.classList.remove('active');
+          t.setAttribute('aria-selected', 'false');
+          t.setAttribute('tabindex', '-1');
+        });
+        panels.querySelectorAll('.tab-panel').forEach(function (p) {
+          p.classList.remove('active');
+        });
+        tab.classList.add('active');
+        tab.setAttribute('aria-selected', 'true');
+        tab.setAttribute('tabindex', '0');
+        document.getElementById('panel-' + tab.getAttribute('data-tab')).classList.add('active');
+        tab.focus();
+      }
+
+      tabs.forEach(function (tab, index) {
+        tab.setAttribute('tabindex', index === 0 ? '0' : '-1');
         tab.addEventListener('click', function () {
-          var target = this.getAttribute('data-tab');
-          tabs.forEach(function (t) {
-            t.classList.remove('active');
-            t.setAttribute('aria-selected', 'false');
-          });
-          document.querySelectorAll('.tab-panel').forEach(function (p) {
-            p.classList.remove('active');
-          });
-          this.classList.add('active');
-          this.setAttribute('aria-selected', 'true');
-          document.getElementById('panel-' + target).classList.add('active');
+          activateTab(this);
+        });
+        tab.addEventListener('keydown', function (e) {
+          var idx = tabs.indexOf(this);
+          if (e.key === 'ArrowRight') {
+            e.preventDefault();
+            activateTab(tabs[(idx + 1) % tabs.length]);
+          } else if (e.key === 'ArrowLeft') {
+            e.preventDefault();
+            activateTab(tabs[(idx - 1 + tabs.length) % tabs.length]);
+          } else if (e.key === 'Home') {
+            e.preventDefault();
+            activateTab(tabs[0]);
+          } else if (e.key === 'End') {
+            e.preventDefault();
+            activateTab(tabs[tabs.length - 1]);
+          }
         });
       });
     }());
