@@ -13,14 +13,11 @@ layout: default
       height="96"
     >
     <h1 class="portfolio-hero__name">Cuong Manh Nguyen</h1>
-    <!-- ⚠️ UPDATE: your tagline -->
-    <p class="portfolio-hero__title">AI Researcher · Software Engineer · Educator</p>
-    <!-- ⚠️ UPDATE: your bio (1-2 sentences) -->
+    <p class="portfolio-hero__title">AI Researcher · Speech &amp; Language Technology · Computer Science</p>
     <p class="portfolio-hero__bio">
-      Passionate about natural language processing, AI for education, and building intelligent systems that make a difference. MSc in Computer Science.
+      Computer Science graduate from Post &amp; Telecommunication Institute of Technology (PTIT), Hanoi. Passionate about AI — especially speech processing, text-to-speech systems, and intelligent solutions for social good.
     </p>
     <div class="portfolio-hero__links">
-      <!-- ⚠️ UPDATE: replace href values with your real profile URLs -->
       <a href="#" class="portfolio-hero__link portfolio-hero__link--primary">🔗 LinkedIn</a>
       <a href="https://github.com/cuongnm5" class="portfolio-hero__link portfolio-hero__link--secondary" target="_blank" rel="noopener noreferrer">GitHub</a>
       <a href="#" class="portfolio-hero__link portfolio-hero__link--secondary">Google Scholar</a>
@@ -45,29 +42,15 @@ layout: default
     <div id="panel-experience" class="tab-panel active" role="tabpanel" aria-labelledby="tab-experience" tabindex="0">
       <h2 class="section-title">Career Experience</h2>
       <ul class="timeline">
-        <!-- ⚠️ UPDATE: replace with real job entries, newest first.
-             Use timeline-track--secondary for older roles (renders amber dot).
-             Copy the <li> block to add more entries. -->
         <li class="timeline-item">
           <div class="timeline-track"></div>
           <div class="timeline-body">
             <div class="timeline-header">
-              <h3 class="timeline-role">Senior AI Engineer</h3>
-              <span class="timeline-date">2022 — Present</span>
+              <h3 class="timeline-role">President, Programming PTIT Club (ProPTIT)</h3>
+              <span class="timeline-date">12/2019 — 12/2020</span>
             </div>
-            <p class="timeline-org">Company Name · Full-time</p>
-            <p class="timeline-desc">Led development of NLP pipelines and deployed machine learning models to production. Mentored junior engineers and collaborated with cross-functional teams on AI product strategy.</p>
-          </div>
-        </li>
-        <li class="timeline-item">
-          <div class="timeline-track timeline-track--secondary"></div>
-          <div class="timeline-body">
-            <div class="timeline-header">
-              <h3 class="timeline-role">ML Research Intern</h3>
-              <span class="timeline-date">2021 — 2022</span>
-            </div>
-            <p class="timeline-org">Research Lab · Internship</p>
-            <p class="timeline-desc">Researched transformer-based models for low-resource NLP tasks in Vietnamese. Contributed to publications at international conferences.</p>
+            <p class="timeline-org">Post &amp; Telecommunication Institute of Technology (PTIT) · Volunteer</p>
+            <p class="timeline-desc">Led a dynamic programming club for university students. Organized fundamental programming and AI courses (C, C++, Java, Data Structures, AI). Managed academic competitions, events, communications, and club finances.</p>
           </div>
         </li>
       </ul>
@@ -77,32 +60,41 @@ layout: default
     <div id="panel-projects" class="tab-panel" role="tabpanel" aria-labelledby="tab-projects" tabindex="0">
       <h2 class="section-title">Projects</h2>
       <div class="card-grid">
-        <!-- ⚠️ UPDATE: replace with real projects.
-             Add portfolio-card--amber for alternating border color.
-             Copy the <div class="portfolio-card"> block to add more. -->
         <div class="portfolio-card">
-          <h3 class="card-title">ViNLP Toolkit</h3>
-          <p class="card-desc">Vietnamese NLP preprocessing library with tokenizer, POS tagger, and named entity recognition.</p>
+          <h3 class="card-title">Vietnamese TTS for VLSP 2020</h3>
+          <p class="card-desc">End-to-end Vietnamese TTS system combining Tacotron-2, HiFiGAN vocoder, and WaveGlow denoiser. Achieved MOS 3.77 / 4.22 natural speech — best result in VLSP 2020 TTS evaluation.</p>
           <div class="card-tags">
-            <span class="tag tag--primary">Python</span>
-            <span class="tag tag--secondary">NLP</span>
-            <span class="tag tag--secondary">Open Source</span>
-          </div>
-          <div class="card-links">
-            <a href="#" class="card-link">GitHub</a>
+            <span class="tag tag--primary">Deep Learning</span>
+            <span class="tag tag--secondary">TTS</span>
+            <span class="tag tag--secondary">Python</span>
+            <span class="tag tag--secondary">Signal Processing</span>
           </div>
         </div>
         <div class="portfolio-card portfolio-card--amber">
-          <h3 class="card-title">EduBot</h3>
-          <p class="card-desc">AI-powered chatbot for K-12 students answering curriculum questions using large language models.</p>
+          <h3 class="card-title">Vietnamese-English Code-Switching TTS</h3>
+          <p class="card-desc">TTS system for Vietnamese-English mixed speech using Tacotron-2 with speaker and language embeddings. Handles CS input via a grapheme-to-syllable model.</p>
           <div class="card-tags">
-            <span class="tag tag--primary">LLM</span>
-            <span class="tag tag--secondary">React</span>
-            <span class="tag tag--secondary">FastAPI</span>
+            <span class="tag tag--primary">Speech Synthesis</span>
+            <span class="tag tag--secondary">NLP</span>
+            <span class="tag tag--secondary">Tacotron-2</span>
           </div>
-          <div class="card-links">
-            <a href="#" class="card-link">Demo</a>
-            <a href="#" class="card-link">GitHub</a>
+        </div>
+        <div class="portfolio-card">
+          <h3 class="card-title">Neural News Recommendation</h3>
+          <p class="card-desc">Attentive neural news recommendation combining user-specific and global news models to recommend both personalized and broadly popular articles.</p>
+          <div class="card-tags">
+            <span class="tag tag--primary">Deep Learning</span>
+            <span class="tag tag--secondary">NLP</span>
+            <span class="tag tag--secondary">Recommendation Systems</span>
+          </div>
+        </div>
+        <div class="portfolio-card portfolio-card--amber">
+          <h3 class="card-title">Recommendation System — Bachelor's Thesis</h3>
+          <p class="card-desc">Research to improve the quality of recommendation systems. Scored 10/10 — Top 0.01% in class.</p>
+          <div class="card-tags">
+            <span class="tag tag--primary">Machine Learning</span>
+            <span class="tag tag--secondary">Research</span>
+            <span class="tag tag--secondary">GPA 3.16/4</span>
           </div>
         </div>
       </div>
@@ -112,27 +104,9 @@ layout: default
     <div id="panel-certifications" class="tab-panel" role="tabpanel" aria-labelledby="tab-certifications" tabindex="0">
       <h2 class="section-title">Licenses &amp; Certifications</h2>
       <div class="card-grid">
-        <!-- ⚠️ UPDATE: replace with real certifications.
-             Pick badge emoji: 🎓 📜 🏅 🔐 ☁️
-             Add portfolio-card--amber for alternating border color.
-             Copy <div class="portfolio-card"> to add more. -->
         <div class="portfolio-card">
-          <div class="card-badge">🎓</div>
-          <h3 class="card-title">AWS Solutions Architect</h3>
-          <p class="card-sub">Amazon Web Services</p>
-          <p class="card-meta">Issued 2023</p>
-          <div class="card-links">
-            <a href="#" class="card-link">Verify</a>
-          </div>
-        </div>
-        <div class="portfolio-card portfolio-card--amber">
-          <div class="card-badge">📜</div>
-          <h3 class="card-title">Deep Learning Specialization</h3>
-          <p class="card-sub">Coursera / DeepLearning.AI</p>
-          <p class="card-meta">Issued 2022</p>
-          <div class="card-links">
-            <a href="#" class="card-link">Verify</a>
-          </div>
+          <h3 class="card-title">Certifications</h3>
+          <p class="card-desc">Please refer to the portfolio PDF or update this section with your credentials.</p>
         </div>
       </div>
     </div>
@@ -141,24 +115,32 @@ layout: default
     <div id="panel-publications" class="tab-panel" role="tabpanel" aria-labelledby="tab-publications" tabindex="0">
       <h2 class="section-title">Publications</h2>
       <ul class="pub-list">
-        <!-- ⚠️ UPDATE: replace with real publications.
-             Copy <li class="pub-item"> to add more entries. -->
         <li class="pub-item">
-          <p class="pub-title"><a href="#">Vietnamese Named Entity Recognition using PhoBERT</a></p>
-          <p class="pub-meta">Cuong M. Nguyen et al. · <span class="pub-venue">EMNLP 2023</span> Workshop</p>
+          <p class="pub-title">Learning Vietnamese-English code-switching speech synthesis model under limited code-switched data scenario</p>
+          <p class="pub-meta">Cuong Manh Nguyen et al. · <span class="pub-venue">PRICAI 2021</span> (Pacific Rim International Conference on Artificial Intelligence — Q2)</p>
           <div class="pub-links">
-            <a href="#" class="pub-link">📄 Paper</a>
             <a href="#" class="pub-link pub-link--secondary">🔗 Scholar</a>
-            <a href="#" class="pub-link pub-link--secondary">DOI</a>
+          </div>
+        </li>
+        <li class="pub-item">
+          <p class="pub-title">Combining User Specific and Global News Features for Neural News Recommendation</p>
+          <p class="pub-meta">Cuong Manh Nguyen et al. · <span class="pub-venue">ACIIDS 2021</span> (Asian Conference on Intelligent Information and Database Systems — Q2)</p>
+          <div class="pub-links">
+            <a href="#" class="pub-link pub-link--secondary">🔗 Scholar</a>
+          </div>
+        </li>
+        <li class="pub-item">
+          <p class="pub-title">Development of Smartcall Vietnamese Text-to-Speech for VLSP 2020</p>
+          <p class="pub-meta">Cuong Manh Nguyen et al. · <span class="pub-venue">VLSP 2020</span> (International Workshop on Vietnamese Language and Speech Processing)</p>
+          <div class="pub-links">
+            <a href="#" class="pub-link pub-link--secondary">🔗 Scholar</a>
           </div>
         </li>
       </ul>
       <div class="reviewer-section">
         <h4 class="reviewer-section__heading">Workshop Reviewer</h4>
         <div class="reviewer-tags">
-          <!-- ⚠️ UPDATE: add <span class="reviewer-tag"> for each venue you reviewed for -->
-          <span class="reviewer-tag">ACL 2023</span>
-          <span class="reviewer-tag">EMNLP 2022</span>
+          <!-- ⚠️ UPDATE: add reviewer roles here -->
         </div>
       </div>
     </div>
@@ -167,17 +149,26 @@ layout: default
     <div id="panel-volunteering" class="tab-panel" role="tabpanel" aria-labelledby="tab-volunteering" tabindex="0">
       <h2 class="section-title">Volunteering</h2>
       <ul class="timeline">
-        <!-- ⚠️ UPDATE: replace with real volunteering entries.
-             Same template as Experience. Copy <li class="timeline-item"> to add more. -->
         <li class="timeline-item">
           <div class="timeline-track"></div>
           <div class="timeline-body">
             <div class="timeline-header">
-              <h3 class="timeline-role">AI Education Volunteer</h3>
-              <span class="timeline-date">2021 — Present</span>
+              <h3 class="timeline-role">Community Volunteer</h3>
+              <span class="timeline-date">2017 — Present</span>
             </div>
-            <p class="timeline-org">Vietnam AI Community</p>
-            <p class="timeline-desc">Ran free workshops on machine learning fundamentals for university students across Vietnam. Contributed to open educational resources.</p>
+            <p class="timeline-org">Various Organizations · Volunteer</p>
+            <p class="timeline-desc">Supported milk distribution for the elderly at Ho Chi Minh City Oncology Hospital. Participated in the "Cleaning House, Cleaning Heart" program. Accompanied Nuoi Em non-profit to visit Vietnamese children in Cambodia.</p>
+          </div>
+        </li>
+        <li class="timeline-item">
+          <div class="timeline-track timeline-track--secondary"></div>
+          <div class="timeline-body">
+            <div class="timeline-header">
+              <h3 class="timeline-role">Group Leader</h3>
+              <span class="timeline-date">08/2017 — 11/2017</span>
+            </div>
+            <p class="timeline-org">Mid-Autumn for Children — Lighting Up Vietnamese Childhood · Volunteer</p>
+            <p class="timeline-desc">Led a volunteer blood donation drive during the Mid-Autumn Festival. Mobilized community participation, managed team members, and supported blood donation applications on the event day.</p>
           </div>
         </li>
       </ul>
@@ -187,24 +178,29 @@ layout: default
     <div id="panel-awards" class="tab-panel" role="tabpanel" aria-labelledby="tab-awards" tabindex="0">
       <h2 class="section-title">Honors &amp; Awards</h2>
       <ul class="award-list">
-        <!-- ⚠️ UPDATE: replace with real awards, newest first.
-             Pick icon: 🥇 🥈 🎖️ 🏅 🏆 🌟
-             Copy <li class="award-item"> to add more. -->
         <li class="award-item">
           <span class="award-icon">🥇</span>
           <div class="award-body">
-            <p class="award-name">Best Paper Award</p>
-            <p class="award-issuer">EMNLP 2023 Workshop</p>
+            <p class="award-name">First Prize — Text-to-Speech Category</p>
+            <p class="award-issuer">Vietnamese Language and Speech Processing (VLSP) 2020</p>
           </div>
-          <span class="award-year">2023</span>
+          <span class="award-year">2020</span>
         </li>
         <li class="award-item">
-          <span class="award-icon">🎖️</span>
+          <span class="award-icon">🥈</span>
           <div class="award-body">
-            <p class="award-name">National AI Hackathon — 1st Place</p>
-            <p class="award-issuer">Ministry of Science &amp; Technology</p>
+            <p class="award-name">Second Prize (University Round) &amp; Top 10 Finalists (National Round)</p>
+            <p class="award-issuer">Digital Race 2020, FPT</p>
           </div>
-          <span class="award-year">2022</span>
+          <span class="award-year">2020</span>
+        </li>
+        <li class="award-item">
+          <span class="award-icon">🏆</span>
+          <div class="award-body">
+            <p class="award-name">Third Prize — ACM/ICPC PTIT 2019</p>
+            <p class="award-issuer">Top 6 out of 174 teams</p>
+          </div>
+          <span class="award-year">2019</span>
         </li>
       </ul>
     </div>
