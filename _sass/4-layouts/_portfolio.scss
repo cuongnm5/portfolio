@@ -461,36 +461,7 @@
     }
   }
 
-  .reviewer-section {
-    margin-top: 24px;
-
-    .reviewer-section__heading { // Fix #6: was bare h4 element selector
-      font-size: 11px;
-      font-weight: 800;
-      color: $dark; // Fix #4: was hard-coded #393e46
-      text-transform: uppercase;
-      letter-spacing: 1px;
-      margin: 0 0 10px;
-    }
-  }
-
-  .reviewer-tags {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 6px;
-  }
-
-  .reviewer-tag {
-    background: #fff;
-    border: 1px solid #e8e8e8;
-    border-radius: 6px;
-    padding: 5px 12px;
-    font-size: 11px;
-    color: #555;
-    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04);
-  }
-
-  // Awards
+// Awards
   .award-list {
     list-style: none;
     margin: 0;
