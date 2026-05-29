@@ -4,36 +4,62 @@ layout: default
 <div class="portfolio-page">
 
   <!-- HERO -->
-  <div class="portfolio-hero">
+  <section class="portfolio-hero" aria-label="Introduction">
     <img
       class="portfolio-hero__photo"
-      src="{{ site.baseurl_root }}/images/avt.jpg"
+      src="{{ site.baseurl }}/images/avt.jpg"
       alt="Cuong Manh Nguyen"
-      width="96"
-      height="96"
+      width="140"
+      height="140"
     >
+    <span class="portfolio-hero__status">Open to Research Opportunities</span>
     <h1 class="portfolio-hero__name">Cuong Manh Nguyen</h1>
-    <p class="portfolio-hero__title">AI Researcher · Speech &amp; Language Technology · Computer Science</p>
+    <p class="portfolio-hero__title">AI Researcher &middot; Speech &amp; Language Technology &middot; Computer Science</p>
+    <p class="portfolio-hero__location">📍 Hanoi, Vietnam</p>
     <p class="portfolio-hero__bio">
-      Computer Science graduate from Post &amp; Telecommunication Institute of Technology (PTIT), Hanoi. Passionate about AI — especially speech processing, text-to-speech systems, and intelligent solutions for social good.
+      Computer Science graduate from Post &amp; Telecommunication Institute of Technology (PTIT). Passionate about AI — especially speech processing, text-to-speech systems, and intelligent solutions for social good.
     </p>
-    <div class="portfolio-hero__links">
-      <a href="#" class="portfolio-hero__link portfolio-hero__link--primary">🔗 LinkedIn</a>
-      <a href="https://github.com/cuongnm5" class="portfolio-hero__link portfolio-hero__link--secondary" target="_blank" rel="noopener noreferrer">GitHub</a>
-      <a href="#" class="portfolio-hero__link portfolio-hero__link--secondary">Google Scholar</a>
-      <a href="mailto:s.cuongnm5@gmail.com" class="portfolio-hero__link portfolio-hero__link--secondary">✉️ Email</a>
+    <div class="portfolio-hero__skills" aria-label="Tech stack">
+      <span class="portfolio-hero__skill">Python</span>
+      <span class="portfolio-hero__skill">PyTorch</span>
+      <span class="portfolio-hero__skill">Speech AI</span>
+      <span class="portfolio-hero__skill">NLP</span>
+      <span class="portfolio-hero__skill">Deep Learning</span>
+      <span class="portfolio-hero__skill">TTS</span>
     </div>
-  </div>
+    <div class="portfolio-hero__links">
+      <a href="https://linkedin.com/in/cuongnm5" class="portfolio-hero__link portfolio-hero__link--primary" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+      <a href="https://github.com/cuongnm5" class="portfolio-hero__link portfolio-hero__link--secondary" target="_blank" rel="noopener noreferrer">GitHub</a>
+      <a href="https://scholar.google.com/citations?user=cuongnm5" class="portfolio-hero__link portfolio-hero__link--secondary" target="_blank" rel="noopener noreferrer">Scholar</a>
+      <a href="mailto:s.cuongnm5@gmail.com" class="portfolio-hero__link portfolio-hero__link--secondary">Email</a>
+    </div>
+
+    <div class="portfolio-hero__stats" aria-label="Quick stats">
+      <div class="hero-stat">
+        <span class="hero-stat__num">3</span>
+        <span class="hero-stat__label">Publications</span>
+      </div>
+      <div class="hero-stat__divider"></div>
+      <div class="hero-stat">
+        <span class="hero-stat__num">3</span>
+        <span class="hero-stat__label">Awards</span>
+      </div>
+      <div class="hero-stat__divider"></div>
+      <div class="hero-stat">
+        <span class="hero-stat__num">4+</span>
+        <span class="hero-stat__label">Projects</span>
+      </div>
+    </div>
+  </section>
 
   <!-- TAB BAR -->
-  <div class="portfolio-tabs" role="tablist" aria-label="Portfolio sections">
-    <button id="tab-experience" class="portfolio-tab active" data-tab="experience" role="tab" aria-selected="true" aria-controls="panel-experience">💼 EXPERIENCE</button>
-    <button id="tab-projects" class="portfolio-tab" data-tab="projects" role="tab" aria-selected="false" aria-controls="panel-projects">🚀 PROJECTS</button>
-    <button id="tab-certifications" class="portfolio-tab" data-tab="certifications" role="tab" aria-selected="false" aria-controls="panel-certifications">📜 CERTIFICATIONS</button>
-    <button id="tab-publications" class="portfolio-tab" data-tab="publications" role="tab" aria-selected="false" aria-controls="panel-publications">📚 PUBLICATIONS</button>
-    <button id="tab-volunteering" class="portfolio-tab" data-tab="volunteering" role="tab" aria-selected="false" aria-controls="panel-volunteering">🤝 VOLUNTEERING</button>
-    <button id="tab-awards" class="portfolio-tab" data-tab="awards" role="tab" aria-selected="false" aria-controls="panel-awards">🏆 AWARDS</button>
-  </div>
+  <nav class="portfolio-tabs" role="tablist" aria-label="Portfolio sections">
+    <button id="tab-experience" class="portfolio-tab active" data-tab="experience" role="tab" aria-selected="true" aria-controls="panel-experience">Experience</button>
+    <button id="tab-projects" class="portfolio-tab" data-tab="projects" role="tab" aria-selected="false" aria-controls="panel-projects">Projects</button>
+    <button id="tab-publications" class="portfolio-tab" data-tab="publications" role="tab" aria-selected="false" aria-controls="panel-publications">Publications</button>
+    <button id="tab-awards" class="portfolio-tab" data-tab="awards" role="tab" aria-selected="false" aria-controls="panel-awards">Awards</button>
+    <button id="tab-volunteering" class="portfolio-tab" data-tab="volunteering" role="tab" aria-selected="false" aria-controls="panel-volunteering">Volunteering</button>
+  </nav>
 
   <!-- CONTENT PANELS -->
   <div class="portfolio-content">
@@ -47,10 +73,10 @@ layout: default
           <div class="timeline-body">
             <div class="timeline-header">
               <h3 class="timeline-role">President, Programming PTIT Club (ProPTIT)</h3>
-              <span class="timeline-date">12/2019 — 12/2020</span>
+              <span class="timeline-date">Dec 2019 — Dec 2020</span>
             </div>
-            <p class="timeline-org">Post &amp; Telecommunication Institute of Technology (PTIT) · Volunteer</p>
-            <p class="timeline-desc">Led a dynamic programming club for university students. Organized fundamental programming and AI courses (C, C++, Java, Data Structures, AI). Managed academic competitions, events, communications, and club finances.</p>
+            <p class="timeline-org">Post &amp; Telecommunication Institute of Technology (PTIT)</p>
+            <p class="timeline-desc">Led a programming club of university students. Organized courses covering C, C++, Java, Data Structures, and AI fundamentals. Managed academic competitions, events, communications, and club finances.</p>
           </div>
         </li>
       </ul>
@@ -61,18 +87,20 @@ layout: default
       <h2 class="section-title">Projects</h2>
       <div class="card-grid">
         <div class="portfolio-card">
-          <h3 class="card-title">Vietnamese TTS for VLSP 2020</h3>
-          <p class="card-desc">End-to-end Vietnamese TTS system combining Tacotron-2, HiFiGAN vocoder, and WaveGlow denoiser. Achieved MOS 3.77 / 4.22 natural speech — best result in VLSP 2020 TTS evaluation.</p>
+          <div class="card-icon">🎙️</div>
+          <h3 class="card-title">Vietnamese TTS — VLSP 2020</h3>
+          <p class="card-desc">End-to-end Vietnamese TTS combining Tacotron-2, HiFiGAN vocoder, and WaveGlow denoiser. Achieved MOS 3.77 / 4.22 — <strong>best result</strong> in VLSP 2020 TTS evaluation.</p>
           <div class="card-tags">
-            <span class="tag tag--primary">Deep Learning</span>
-            <span class="tag tag--secondary">TTS</span>
+            <span class="tag tag--primary">TTS</span>
+            <span class="tag tag--secondary">Deep Learning</span>
             <span class="tag tag--secondary">Python</span>
             <span class="tag tag--secondary">Signal Processing</span>
           </div>
         </div>
-        <div class="portfolio-card portfolio-card--amber">
-          <h3 class="card-title">Vietnamese-English Code-Switching TTS</h3>
-          <p class="card-desc">TTS system for Vietnamese-English mixed speech using Tacotron-2 with speaker and language embeddings. Handles CS input via a grapheme-to-syllable model.</p>
+        <div class="portfolio-card">
+          <div class="card-icon">🔤</div>
+          <h3 class="card-title">Code-Switching TTS (VI–EN)</h3>
+          <p class="card-desc">TTS for Vietnamese-English mixed speech using Tacotron-2 with speaker and language embeddings. Handles CS input via a grapheme-to-syllable model.</p>
           <div class="card-tags">
             <span class="tag tag--primary">Speech Synthesis</span>
             <span class="tag tag--secondary">NLP</span>
@@ -80,32 +108,23 @@ layout: default
           </div>
         </div>
         <div class="portfolio-card">
+          <div class="card-icon">📰</div>
           <h3 class="card-title">Neural News Recommendation</h3>
           <p class="card-desc">Attentive neural news recommendation combining user-specific and global news models to recommend both personalized and broadly popular articles.</p>
           <div class="card-tags">
             <span class="tag tag--primary">Deep Learning</span>
             <span class="tag tag--secondary">NLP</span>
-            <span class="tag tag--secondary">Recommendation Systems</span>
+            <span class="tag tag--secondary">Recommendation</span>
           </div>
         </div>
-        <div class="portfolio-card portfolio-card--amber">
-          <h3 class="card-title">Recommendation System — Bachelor's Thesis</h3>
-          <p class="card-desc">Research to improve the quality of recommendation systems. Scored 10/10 — Top 0.01% in class.</p>
+        <div class="portfolio-card portfolio-card--accent">
+          <div class="card-icon">🎓</div>
+          <h3 class="card-title">Recommendation System — Thesis</h3>
+          <p class="card-desc">Research to improve recommendation system quality. Scored <strong>10/10</strong> — Top 0.01% in class.</p>
           <div class="card-tags">
             <span class="tag tag--primary">Machine Learning</span>
             <span class="tag tag--secondary">Research</span>
           </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- CERTIFICATIONS -->
-    <div id="panel-certifications" class="tab-panel" role="tabpanel" aria-labelledby="tab-certifications" tabindex="0">
-      <h2 class="section-title">Licenses &amp; Certifications</h2>
-      <div class="card-grid">
-        <div class="portfolio-card">
-          <h3 class="card-title">Certifications</h3>
-          <p class="card-desc">Certifications will be listed here. Check back soon.</p>
         </div>
       </div>
     </div>
@@ -115,25 +134,65 @@ layout: default
       <h2 class="section-title">Publications</h2>
       <ul class="pub-list">
         <li class="pub-item">
-          <p class="pub-title"><a href="#">Learning Vietnamese-English code-switching speech synthesis model under limited code-switched data scenario</a></p>
-          <p class="pub-meta">Cuong Manh Nguyen et al. · <span class="pub-venue">PRICAI 2021</span> (Pacific Rim International Conference on Artificial Intelligence — Q2)</p>
-          <div class="pub-links">
-            <a href="#" class="pub-link pub-link--secondary">🔗 Scholar</a>
+          <div class="pub-badge">Q2</div>
+          <div class="pub-body">
+            <p class="pub-title"><a href="#">Learning Vietnamese-English Code-Switching Speech Synthesis under Limited Data</a></p>
+            <p class="pub-meta">Cuong Manh Nguyen et al. &middot; <span class="pub-venue">PRICAI 2021</span> — Pacific Rim International Conference on Artificial Intelligence</p>
+            <div class="pub-links">
+              <a href="#" class="pub-link">Google Scholar</a>
+            </div>
           </div>
         </li>
         <li class="pub-item">
-          <p class="pub-title"><a href="#">Combining User Specific and Global News Features for Neural News Recommendation</a></p>
-          <p class="pub-meta">Cuong Manh Nguyen et al. · <span class="pub-venue">ACIIDS 2021</span> (Asian Conference on Intelligent Information and Database Systems — Q2)</p>
-          <div class="pub-links">
-            <a href="#" class="pub-link pub-link--secondary">🔗 Scholar</a>
+          <div class="pub-badge">Q2</div>
+          <div class="pub-body">
+            <p class="pub-title"><a href="#">Combining User Specific and Global News Features for Neural News Recommendation</a></p>
+            <p class="pub-meta">Cuong Manh Nguyen et al. &middot; <span class="pub-venue">ACIIDS 2021</span> — Asian Conference on Intelligent Information and Database Systems</p>
+            <div class="pub-links">
+              <a href="#" class="pub-link">Google Scholar</a>
+            </div>
           </div>
         </li>
         <li class="pub-item">
-          <p class="pub-title"><a href="#">Development of Smartcall Vietnamese Text-to-Speech for VLSP 2020</a></p>
-          <p class="pub-meta">Cuong Manh Nguyen et al. · <span class="pub-venue">VLSP 2020</span> (International Workshop on Vietnamese Language and Speech Processing)</p>
-          <div class="pub-links">
-            <a href="#" class="pub-link pub-link--secondary">🔗 Scholar</a>
+          <div class="pub-badge pub-badge--workshop">WS</div>
+          <div class="pub-body">
+            <p class="pub-title"><a href="#">Development of Smartcall Vietnamese Text-to-Speech for VLSP 2020</a></p>
+            <p class="pub-meta">Cuong Manh Nguyen et al. &middot; <span class="pub-venue">VLSP 2020</span> — International Workshop on Vietnamese Language and Speech Processing</p>
+            <div class="pub-links">
+              <a href="#" class="pub-link">Google Scholar</a>
+            </div>
           </div>
+        </li>
+      </ul>
+    </div>
+
+    <!-- AWARDS -->
+    <div id="panel-awards" class="tab-panel" role="tabpanel" aria-labelledby="tab-awards" tabindex="0">
+      <h2 class="section-title">Honors &amp; Awards</h2>
+      <ul class="award-list">
+        <li class="award-item">
+          <div class="award-medal award-medal--gold">🥇</div>
+          <div class="award-body">
+            <p class="award-name">First Prize — Text-to-Speech Category</p>
+            <p class="award-issuer">Vietnamese Language and Speech Processing (VLSP) 2020</p>
+          </div>
+          <span class="award-year">2020</span>
+        </li>
+        <li class="award-item">
+          <div class="award-medal award-medal--silver">🥈</div>
+          <div class="award-body">
+            <p class="award-name">2nd Prize (University) &amp; Top 10 Finalists (National)</p>
+            <p class="award-issuer">Digital Race 2020 — FPT Corporation</p>
+          </div>
+          <span class="award-year">2020</span>
+        </li>
+        <li class="award-item">
+          <div class="award-medal award-medal--bronze">🏆</div>
+          <div class="award-body">
+            <p class="award-name">Third Prize — ACM/ICPC PTIT 2019</p>
+            <p class="award-issuer">Top 6 out of 174 teams</p>
+          </div>
+          <span class="award-year">2019</span>
         </li>
       </ul>
     </div>
@@ -149,8 +208,8 @@ layout: default
               <h3 class="timeline-role">Community Volunteer</h3>
               <span class="timeline-date">2017 — Present</span>
             </div>
-            <p class="timeline-org">Various Organizations · Volunteer</p>
-            <p class="timeline-desc">Supported milk distribution for the elderly at Ho Chi Minh City Oncology Hospital. Participated in the "Cleaning House, Cleaning Heart" program. Accompanied Nuoi Em non-profit to visit Vietnamese children in Cambodia.</p>
+            <p class="timeline-org">Various Organizations</p>
+            <p class="timeline-desc">Supported milk distribution for elderly patients at Ho Chi Minh City Oncology Hospital. Participated in "Cleaning House, Cleaning Heart" program. Accompanied Nuoi Em non-profit to visit Vietnamese children in Cambodia.</p>
           </div>
         </li>
         <li class="timeline-item">
@@ -158,42 +217,11 @@ layout: default
           <div class="timeline-body">
             <div class="timeline-header">
               <h3 class="timeline-role">Group Leader</h3>
-              <span class="timeline-date">08/2017 — 11/2017</span>
+              <span class="timeline-date">Aug — Nov 2017</span>
             </div>
-            <p class="timeline-org">Mid-Autumn for Children — Lighting Up Vietnamese Childhood · Volunteer</p>
-            <p class="timeline-desc">Led a volunteer blood donation drive during the Mid-Autumn Festival. Mobilized community participation, managed team members, and supported blood donation applications on the event day.</p>
+            <p class="timeline-org">Mid-Autumn for Children — Lighting Up Vietnamese Childhood</p>
+            <p class="timeline-desc">Led a volunteer blood donation drive during the Mid-Autumn Festival. Mobilized community participation, managed team members, and coordinated blood donation logistics on event day.</p>
           </div>
-        </li>
-      </ul>
-    </div>
-
-    <!-- AWARDS -->
-    <div id="panel-awards" class="tab-panel" role="tabpanel" aria-labelledby="tab-awards" tabindex="0">
-      <h2 class="section-title">Honors &amp; Awards</h2>
-      <ul class="award-list">
-        <li class="award-item">
-          <span class="award-icon">🥇</span>
-          <div class="award-body">
-            <p class="award-name">First Prize — Text-to-Speech Category</p>
-            <p class="award-issuer">Vietnamese Language and Speech Processing (VLSP) 2020</p>
-          </div>
-          <span class="award-year">2020</span>
-        </li>
-        <li class="award-item">
-          <span class="award-icon">🥈</span>
-          <div class="award-body">
-            <p class="award-name">Second Prize (University Round) &amp; Top 10 Finalists (National Round)</p>
-            <p class="award-issuer">Digital Race 2020, FPT</p>
-          </div>
-          <span class="award-year">2020</span>
-        </li>
-        <li class="award-item">
-          <span class="award-icon">🏆</span>
-          <div class="award-body">
-            <p class="award-name">Third Prize — ACM/ICPC PTIT 2019</p>
-            <p class="award-issuer">Top 6 out of 174 teams</p>
-          </div>
-          <span class="award-year">2019</span>
         </li>
       </ul>
     </div>
@@ -204,7 +232,7 @@ layout: default
   <script>
     (function () {
       var tabs = Array.from(document.querySelectorAll('.portfolio-tab'));
-      var panels = document.querySelector('.portfolio-content');
+      var content = document.querySelector('.portfolio-content');
 
       function activateTab(tab) {
         tabs.forEach(function (t) {
@@ -212,36 +240,26 @@ layout: default
           t.setAttribute('aria-selected', 'false');
           t.setAttribute('tabindex', '-1');
         });
-        panels.querySelectorAll('.tab-panel').forEach(function (p) {
+        content.querySelectorAll('.tab-panel').forEach(function (p) {
           p.classList.remove('active');
         });
         tab.classList.add('active');
         tab.setAttribute('aria-selected', 'true');
         tab.setAttribute('tabindex', '0');
-        document.getElementById('panel-' + tab.getAttribute('data-tab')).classList.add('active');
+        var panel = document.getElementById('panel-' + tab.getAttribute('data-tab'));
+        panel.classList.add('active');
         tab.focus();
       }
 
       tabs.forEach(function (tab, index) {
         tab.setAttribute('tabindex', index === 0 ? '0' : '-1');
-        tab.addEventListener('click', function () {
-          activateTab(this);
-        });
+        tab.addEventListener('click', function () { activateTab(this); });
         tab.addEventListener('keydown', function (e) {
           var idx = tabs.indexOf(this);
-          if (e.key === 'ArrowRight') {
-            e.preventDefault();
-            activateTab(tabs[(idx + 1) % tabs.length]);
-          } else if (e.key === 'ArrowLeft') {
-            e.preventDefault();
-            activateTab(tabs[(idx - 1 + tabs.length) % tabs.length]);
-          } else if (e.key === 'Home') {
-            e.preventDefault();
-            activateTab(tabs[0]);
-          } else if (e.key === 'End') {
-            e.preventDefault();
-            activateTab(tabs[tabs.length - 1]);
-          }
+          if (e.key === 'ArrowRight') { e.preventDefault(); activateTab(tabs[(idx + 1) % tabs.length]); }
+          else if (e.key === 'ArrowLeft') { e.preventDefault(); activateTab(tabs[(idx - 1 + tabs.length) % tabs.length]); }
+          else if (e.key === 'Home') { e.preventDefault(); activateTab(tabs[0]); }
+          else if (e.key === 'End') { e.preventDefault(); activateTab(tabs[tabs.length - 1]); }
         });
       });
     }());
