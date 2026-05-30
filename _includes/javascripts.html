@@ -1,16 +1,16 @@
-<script src="{{ site.baseurl_root }}/js/vendors/jquery-3.3.1.min.js"></script>
-<script src="{{ site.baseurl_root }}/js/vendors/simple-jekyll-search.min.js"></script>
 <script>
-  SimpleJekyllSearch({
-    searchInput: document.getElementById("js-search-input"),
-    resultsContainer: document.getElementById("js-results-container"),
-    json: "{{site.baseurl_root}}/search.json",
-    searchResultTemplate: '<li class="search-results__item"><a class="search-results__link" href="{url}">{title}</a><br> <span class="search-results__date">{date}</span></li>',
-    noResultsText: '<li class="no-results">No results found</li>'
-  });
+  (function () {
+    var topBtn = document.querySelector('.top');
+    if (!topBtn) return;
+    window.addEventListener('scroll', function () {
+      if (window.scrollY > window.innerHeight) {
+        topBtn.classList.add('is-active');
+      } else {
+        topBtn.classList.remove('is-active');
+      }
+    });
+    topBtn.addEventListener('click', function () {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+  }());
 </script>
-<script src="{{ site.baseurl_root }}/js/vendors/transition.js"></script>
-<script src="{{ site.baseurl_root }}/js/vendors/zoom.min.js"></script>
-<script src="{{ site.baseurl_root }}/js/vendors/instafeed.min.js"></script>
-<script src="{{ site.baseurl_root }}/js/vendors/jquery.fitvids.js"></script>
-<script src="{{ site.baseurl_root }}/js/common.js"></script>

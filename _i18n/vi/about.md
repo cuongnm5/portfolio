@@ -1,3 +1,0 @@
-Chào đón bạn đến với góc nhỏ của mình 🌟
-
-Mình bắt đầu viết blog này như một cách chia sẻ những bài học, suy ngẫm và những khoảnh khắc đáng nhớ đã định hình cuộc hành trình của mình. Đây cũng là một dự án cá nhân để cải thiện kỹ năng viết tiếng Anh của mình — nên bạn hãy coi đây là một "tác phẩm đang hoàn thiện" nhé! Ở đây không có sự hào nhoáng hay lời văn hoa mỹ, chỉ là những dòng suy tư chân thành, giản dị với một chút nhìn nhận về bên trong. Hy vọng bạn sẽ tìm thấy điều gì đó đồng điệu và mang lại chút cảm hứng cho cuộc sống của chính bạn. 💛
