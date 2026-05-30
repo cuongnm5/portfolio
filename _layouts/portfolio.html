@@ -43,12 +43,12 @@ layout: portfolio-base
      TAB BAR
      ================================================================ -->
 <div class="pf-tab-bar" role="tablist" aria-label="Portfolio sections">
-  <button class="pf-tab active" data-tab="home"         role="tab" aria-selected="true"  aria-controls="panel-home"         tabindex="0">Home</button>
-  <button class="pf-tab"        data-tab="experience"   role="tab" aria-selected="false" aria-controls="panel-experience"   tabindex="-1">Experience</button>
-  <button class="pf-tab"        data-tab="projects"     role="tab" aria-selected="false" aria-controls="panel-projects"     tabindex="-1">Projects</button>
-  <button class="pf-tab"        data-tab="publications" role="tab" aria-selected="false" aria-controls="panel-publications" tabindex="-1">Publications</button>
-  <button class="pf-tab"        data-tab="awards"       role="tab" aria-selected="false" aria-controls="panel-awards"       tabindex="-1">Awards</button>
-  <button class="pf-tab"        data-tab="lifestyle"    role="tab" aria-selected="false" aria-controls="panel-lifestyle"    tabindex="-1">Lifestyle</button>
+  <button id="tab-home"         class="pf-tab active" data-tab="home"         role="tab" aria-selected="true"  aria-controls="panel-home"         tabindex="0">Home</button>
+  <button id="tab-experience"   class="pf-tab"        data-tab="experience"   role="tab" aria-selected="false" aria-controls="panel-experience"   tabindex="-1">Experience</button>
+  <button id="tab-projects"     class="pf-tab"        data-tab="projects"     role="tab" aria-selected="false" aria-controls="panel-projects"     tabindex="-1">Projects</button>
+  <button id="tab-publications" class="pf-tab"        data-tab="publications" role="tab" aria-selected="false" aria-controls="panel-publications" tabindex="-1">Publications</button>
+  <button id="tab-awards"       class="pf-tab"        data-tab="awards"       role="tab" aria-selected="false" aria-controls="panel-awards"       tabindex="-1">Awards</button>
+  <button id="tab-lifestyle"    class="pf-tab"        data-tab="lifestyle"    role="tab" aria-selected="false" aria-controls="panel-lifestyle"    tabindex="-1">Lifestyle</button>
 </div>
 
 <!-- ================================================================
@@ -57,7 +57,7 @@ layout: portfolio-base
 <div class="pf-panels">
 
   <!-- ── HOME ────────────────────────────────────────────────────── -->
-  <section id="panel-home" class="pf-panel active" role="tabpanel" tabindex="0">
+  <section id="panel-home" class="pf-panel active" role="tabpanel" tabindex="0" aria-labelledby="tab-home">
 
     <div class="pf-home-hero">
       <img
@@ -111,7 +111,7 @@ layout: portfolio-base
       </div>
       <div class="pf-stat-card">
         <span class="pf-stat-icon">🏢</span>
-        <span class="pf-stat-value">5 yrs</span>
+        <span class="pf-stat-value">6 yrs</span>
         <p class="pf-stat-label">@ Zalo AI</p>
       </div>
       <div class="pf-stat-card">
@@ -129,7 +129,7 @@ layout: portfolio-base
   </section>
 
   <!-- ── EXPERIENCE ───────────────────────────────────────────────── -->
-  <section id="panel-experience" class="pf-panel" role="tabpanel" tabindex="0" hidden>
+  <section id="panel-experience" class="pf-panel" role="tabpanel" tabindex="0" aria-labelledby="tab-experience" hidden>
 
     <div class="pf-section-header"><h2>Experience</h2></div>
 
@@ -187,7 +187,7 @@ layout: portfolio-base
   </section>
 
   <!-- ── PROJECTS ─────────────────────────────────────────────────── -->
-  <section id="panel-projects" class="pf-panel" role="tabpanel" tabindex="0" hidden>
+  <section id="panel-projects" class="pf-panel" role="tabpanel" tabindex="0" aria-labelledby="tab-projects" hidden>
 
     <div class="pf-section-header"><h2>Projects</h2></div>
 
@@ -251,7 +251,7 @@ layout: portfolio-base
   </section>
 
   <!-- ── PUBLICATIONS ─────────────────────────────────────────────── -->
-  <section id="panel-publications" class="pf-panel" role="tabpanel" tabindex="0" hidden>
+  <section id="panel-publications" class="pf-panel" role="tabpanel" tabindex="0" aria-labelledby="tab-publications" hidden>
 
     <div class="pf-section-header"><h2>Publications</h2></div>
 
@@ -311,7 +311,7 @@ layout: portfolio-base
   </section>
 
   <!-- ── AWARDS ───────────────────────────────────────────────────── -->
-  <section id="panel-awards" class="pf-panel" role="tabpanel" tabindex="0" hidden>
+  <section id="panel-awards" class="pf-panel" role="tabpanel" tabindex="0" aria-labelledby="tab-awards" hidden>
 
     <div class="pf-section-header"><h2>Honors &amp; Awards</h2></div>
 
@@ -336,7 +336,7 @@ layout: portfolio-base
       </li>
 
       <li class="pf-award-item">
-        <span class="pf-award-icon" aria-hidden="true">🥈</span>
+        <span class="pf-award-icon" aria-hidden="true">🥉</span>
         <div class="pf-award-body">
           <p class="pf-award-name">3rd Prize — ACM/ICPC PTIT</p>
           <p class="pf-award-org">Top 6 of 174 competing teams</p>
@@ -366,7 +366,7 @@ layout: portfolio-base
   </section>
 
   <!-- ── LIFESTYLE ─────────────────────────────────────────────────── -->
-  <section id="panel-lifestyle" class="pf-panel" role="tabpanel" tabindex="0" hidden>
+  <section id="panel-lifestyle" class="pf-panel" role="tabpanel" tabindex="0" aria-labelledby="tab-lifestyle" hidden>
 
     <div class="pf-section-header">
       <h2>My Life Outside Code</h2>
@@ -467,9 +467,10 @@ layout: portfolio-base
     var panel = document.getElementById('panel-' + tab.getAttribute('data-tab'));
     panel.classList.add('active');
     panel.hidden = false;
+    tab.focus();
   }
 
-  tabs.forEach(function (tab, idx) {
+  tabs.forEach(function (tab) {
     tab.addEventListener('click', function () { activateTab(this); });
     tab.addEventListener('keydown', function (e) {
       var i = tabs.indexOf(this);
