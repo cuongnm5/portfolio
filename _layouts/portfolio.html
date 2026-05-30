@@ -6,14 +6,16 @@ layout: portfolio-base
      TOP APP BAR
      ================================================================ -->
 <header class="pf-app-bar" id="pf-app-bar">
-  <div class="pf-app-bar__center" role="tablist" aria-label="Portfolio navigation">
-    <button id="tab-home"     class="pf-nav-tab active" data-tab="home"     role="tab" aria-selected="true"  aria-controls="panel-home"     tabindex="0">Home</button>
-    <div class="pf-app-bar__brand">
-      <div class="pf-app-bar__monogram" aria-hidden="true">C</div>
-      <span class="pf-app-bar__name">Cuong Manh Nguyen</span>
-    </div>
-    <button id="tab-projects" class="pf-nav-tab"        data-tab="projects" role="tab" aria-selected="false" aria-controls="panel-projects" tabindex="-1">Projects</button>
+  <div class="pf-app-bar__brand">
+    <div class="pf-app-bar__monogram" aria-hidden="true">C</div>
+    <span class="pf-app-bar__name">Cuong Manh Nguyen</span>
   </div>
+
+  <nav class="pf-app-bar__nav" role="tablist" aria-label="Portfolio navigation">
+    <button id="tab-home"     class="pf-nav-tab active" data-tab="home"     role="tab" aria-selected="true"  aria-controls="panel-home"     tabindex="0">Home</button>
+    <button id="tab-projects" class="pf-nav-tab"        data-tab="projects" role="tab" aria-selected="false" aria-controls="panel-projects" tabindex="-1">Projects</button>
+  </nav>
+
   <button class="pf-icon-btn pf-menu-btn" id="pf-menu-btn" aria-label="Open navigation menu" aria-expanded="false">
     ☰
   </button>
