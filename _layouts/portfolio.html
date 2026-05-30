@@ -1,250 +1,519 @@
 ---
-layout: default
+layout: portfolio-base
 ---
-<div class="portfolio-page">
 
-  <!-- HERO -->
-  <div class="portfolio-hero">
-    <img
-      class="portfolio-hero__photo"
-      src="{{ site.baseurl_root }}/images/avt.jpg"
-      alt="Cuong Manh Nguyen"
-      width="96"
-      height="96"
-    >
-    <h1 class="portfolio-hero__name">Cuong Manh Nguyen</h1>
-    <p class="portfolio-hero__title">AI Researcher · Speech &amp; Language Technology · Computer Science</p>
-    <p class="portfolio-hero__bio">
-      Computer Science graduate from Post &amp; Telecommunication Institute of Technology (PTIT), Hanoi. Passionate about AI — especially speech processing, text-to-speech systems, and intelligent solutions for social good.
+<!-- ================================================================
+     TOP APP BAR
+     ================================================================ -->
+<header class="pf-app-bar" id="pf-app-bar">
+  <a href="{{ site.baseurl }}/" class="pf-app-bar__brand" aria-label="Cuong Manh Nguyen — Home">
+    <div class="pf-app-bar__monogram" aria-hidden="true">C</div>
+    <span class="pf-app-bar__name">Cuong Manh Nguyen</span>
+  </a>
+
+  <nav class="pf-app-bar__nav" aria-label="Site navigation">
+    <a href="{{ site.baseurl }}/" class="pf-app-bar__nav-link">Home</a>
+    <a href="{{ site.baseurl }}/portfolio/" class="pf-app-bar__nav-link active">Portfolio</a>
+    <a href="{{ site.baseurl }}/about/" class="pf-app-bar__nav-link">About</a>
+  </nav>
+
+  <a href="mailto:s.cuongnm5@gmail.com" class="pf-icon-btn" aria-label="Email Cuong">✉</a>
+
+  <button class="pf-icon-btn pf-menu-btn" id="pf-menu-btn" aria-label="Open navigation menu" aria-expanded="false">
+    ☰
+  </button>
+</header>
+
+<!-- ================================================================
+     MOBILE NAV DRAWER
+     ================================================================ -->
+<div class="pf-nav-overlay" id="pf-nav-overlay" aria-hidden="true"></div>
+<nav class="pf-nav-drawer" id="pf-nav-drawer" aria-label="Mobile navigation" hidden>
+  <div class="pf-nav-drawer__header">
+    <p class="pf-nav-drawer__name">Cuong Manh Nguyen</p>
+    <p class="pf-nav-drawer__sub">AI Engineer · Researcher</p>
+  </div>
+  <a href="{{ site.baseurl }}/" class="pf-nav-drawer__link">Home</a>
+  <a href="{{ site.baseurl }}/portfolio/" class="pf-nav-drawer__link">Portfolio</a>
+  <a href="{{ site.baseurl }}/about/" class="pf-nav-drawer__link">About</a>
+  <a href="mailto:s.cuongnm5@gmail.com" class="pf-nav-drawer__link">✉ Contact</a>
+</nav>
+
+<!-- ================================================================
+     TAB BAR
+     ================================================================ -->
+<div class="pf-tab-bar" role="tablist" aria-label="Portfolio sections">
+  <button class="pf-tab active" data-tab="home"         role="tab" aria-selected="true"  aria-controls="panel-home"         tabindex="0">Home</button>
+  <button class="pf-tab"        data-tab="experience"   role="tab" aria-selected="false" aria-controls="panel-experience"   tabindex="-1">Experience</button>
+  <button class="pf-tab"        data-tab="projects"     role="tab" aria-selected="false" aria-controls="panel-projects"     tabindex="-1">Projects</button>
+  <button class="pf-tab"        data-tab="publications" role="tab" aria-selected="false" aria-controls="panel-publications" tabindex="-1">Publications</button>
+  <button class="pf-tab"        data-tab="awards"       role="tab" aria-selected="false" aria-controls="panel-awards"       tabindex="-1">Awards</button>
+  <button class="pf-tab"        data-tab="lifestyle"    role="tab" aria-selected="false" aria-controls="panel-lifestyle"    tabindex="-1">Lifestyle</button>
+</div>
+
+<!-- ================================================================
+     PANELS
+     ================================================================ -->
+<div class="pf-panels">
+
+  <!-- ── HOME ────────────────────────────────────────────────────── -->
+  <section id="panel-home" class="pf-panel active" role="tabpanel" tabindex="0">
+
+    <div class="pf-home-hero">
+      <img
+        class="pf-avatar"
+        src="{{ site.baseurl_root }}/images/avt.jpg"
+        alt="Cuong Manh Nguyen"
+        width="128"
+        height="128"
+      >
+      <div>
+        <h1 class="pf-hero-name">Cuong Manh Nguyen</h1>
+        <p class="pf-hero-title">AI Engineer · Speech &amp; Language Technology · Drug Discovery</p>
+        <p class="pf-hero-bio">
+          Computer Science graduate from PTIT, Hanoi. AI Engineer at Zalo AI (VNG) building
+          Vietnamese LLMs, TTS, and voice systems since 2020. Research Intern at HySonLab
+          (University of Alabama) working on protein and antibody generation. Passionate about
+          AI that improves everyday life.
+        </p>
+        <div class="pf-hero-links">
+          <a href="https://www.linkedin.com/in/cuongnm5" class="pf-btn pf-btn--filled" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+          <a href="https://github.com/cuongnm5"          class="pf-btn pf-btn--tonal"  target="_blank" rel="noopener noreferrer">GitHub</a>
+          <a href="mailto:s.cuongnm5@gmail.com"          class="pf-btn pf-btn--tonal">✉ Email</a>
+          <a href="{{ site.baseurl_root }}/CuongManhNguyen_CV.pdf" class="pf-btn pf-btn--outlined" target="_blank" rel="noopener noreferrer">Download CV</a>
+        </div>
+      </div>
+    </div>
+
+    <h2 class="pf-section-label">Technical Skills</h2>
+    <div class="pf-chips">
+      <span class="pf-chip">Python</span>
+      <span class="pf-chip">Golang</span>
+      <span class="pf-chip">PyTorch</span>
+      <span class="pf-chip">TensorFlow</span>
+      <span class="pf-chip">FastAPI</span>
+      <span class="pf-chip">Kubernetes</span>
+      <span class="pf-chip">Elasticsearch</span>
+      <span class="pf-chip">Milvus</span>
+      <span class="pf-chip">Redis</span>
+      <span class="pf-chip">MongoDB</span>
+      <span class="pf-chip">MinIO</span>
+      <span class="pf-chip">CUDA</span>
+      <span class="pf-chip">Linux</span>
+      <span class="pf-chip">Git</span>
+    </div>
+
+    <div class="pf-stats">
+      <div class="pf-stat-card">
+        <span class="pf-stat-icon">📄</span>
+        <span class="pf-stat-value">5+</span>
+        <p class="pf-stat-label">Publications</p>
+      </div>
+      <div class="pf-stat-card">
+        <span class="pf-stat-icon">🏢</span>
+        <span class="pf-stat-value">5 yrs</span>
+        <p class="pf-stat-label">@ Zalo AI</p>
+      </div>
+      <div class="pf-stat-card">
+        <span class="pf-stat-icon">🎓</span>
+        <span class="pf-stat-value">10/10</span>
+        <p class="pf-stat-label">Thesis Score</p>
+      </div>
+      <div class="pf-stat-card">
+        <span class="pf-stat-icon">🥇</span>
+        <span class="pf-stat-value">VLSP 2020</span>
+        <p class="pf-stat-label">1st Prize TTS</p>
+      </div>
+    </div>
+
+  </section>
+
+  <!-- ── EXPERIENCE ───────────────────────────────────────────────── -->
+  <section id="panel-experience" class="pf-panel" role="tabpanel" tabindex="0" hidden>
+
+    <div class="pf-section-header"><h2>Experience</h2></div>
+
+    <ul class="pf-timeline">
+
+      <li class="pf-timeline-item">
+        <div class="pf-timeline-track" aria-hidden="true"></div>
+        <div class="pf-exp-card">
+          <div class="pf-exp-header">
+            <h3 class="pf-exp-role">Research Intern</h3>
+            <span class="pf-exp-date">Apr 2025 – Present</span>
+          </div>
+          <p class="pf-exp-org">HySonLab, University of Alabama · Remote</p>
+          <ul class="pf-exp-bullets">
+            <li>Conducted research on drug discovery and repurposing with a focus on protein and antibody generation.</li>
+            <li>Co-authored TeBaAb: text-based antigen-conditioned antibody redesign — submitted to NeurIPS 2025 Workshop with aim to publish in Oxford Journal.</li>
+          </ul>
+        </div>
+      </li>
+
+      <li class="pf-timeline-item">
+        <div class="pf-timeline-track" aria-hidden="true"></div>
+        <div class="pf-exp-card">
+          <div class="pf-exp-header">
+            <h3 class="pf-exp-role">AI Engineer</h3>
+            <span class="pf-exp-date">Feb 2020 – Present</span>
+          </div>
+          <p class="pf-exp-org">Zalo AI, VNG Corporation · Ho Chi Minh City</p>
+          <ul class="pf-exp-bullets">
+            <li><strong>KiLM</strong> — Vietnamese-optimized LLM; KiLM-13b-v24.7.1 scored 66.07, closely trailing Llama-3-70B at 66.44.</li>
+            <li>Refactored AI creative card service from Python to Golang, increasing concurrent user throughput by 500%.</li>
+            <li>Developed a RAG system for KiLM integrating Milvus (vector search), Elasticsearch (FAQ retrieval), and MinIO (scalable storage).</li>
+            <li><strong>Kiki Auto</strong> — Vietnamese in-car voice assistant; conducted in-depth TTS research (Tacotron2, FastSpeech, VITS); refactored TTS service achieving 80% error rate reduction.</li>
+            <li>Expanded and hardened ASR services with advanced fault tolerance and scalability measures.</li>
+          </ul>
+        </div>
+      </li>
+
+      <li class="pf-timeline-item">
+        <div class="pf-timeline-track" aria-hidden="true"></div>
+        <div class="pf-exp-card">
+          <div class="pf-exp-header">
+            <h3 class="pf-exp-role">President, Programming PTIT Club (ProPTIT)</h3>
+            <span class="pf-exp-date">Dec 2019 – Dec 2020</span>
+          </div>
+          <p class="pf-exp-org">Post &amp; Telecommunication Institute of Technology · Hanoi</p>
+          <ul class="pf-exp-bullets">
+            <li>Led a university programming club; organized AI and programming courses (C, C++, Java, Data Structures, AI) for students.</li>
+            <li>Managed academic competitions, events, communications, finances, and human resources.</li>
+          </ul>
+        </div>
+      </li>
+
+    </ul>
+  </section>
+
+  <!-- ── PROJECTS ─────────────────────────────────────────────────── -->
+  <section id="panel-projects" class="pf-panel" role="tabpanel" tabindex="0" hidden>
+
+    <div class="pf-section-header"><h2>Projects</h2></div>
+
+    <div class="pf-card-grid">
+
+      <div class="pf-proj-card">
+        <span class="pf-proj-badge">NeurIPS 2025 Workshop · Submitted</span>
+        <h3 class="pf-proj-title">TeBaAb — Antibody Redesign</h3>
+        <p class="pf-proj-desc">Text-based antigen-conditioned antibody redesign. Research at HySonLab, University of Alabama. Submitted to NeurIPS 2025 Workshop; aiming to publish in Oxford Journal.</p>
+        <div class="pf-proj-tags">
+          <span class="pf-tag">Drug Discovery</span>
+          <span class="pf-tag">Bioinformatics</span>
+          <span class="pf-tag">Python</span>
+        </div>
+      </div>
+
+      <div class="pf-proj-card">
+        <span class="pf-proj-badge">🥇 VLSP 2020 · 1st Prize</span>
+        <h3 class="pf-proj-title">Vietnamese TTS for VLSP 2020</h3>
+        <p class="pf-proj-desc">End-to-end Vietnamese TTS combining Tacotron-2, HiFiGAN vocoder, and WaveGlow denoiser. Achieved MOS 3.77/4.22 — best result at VLSP 2020 evaluation.</p>
+        <div class="pf-proj-tags">
+          <span class="pf-tag">Deep Learning</span>
+          <span class="pf-tag">TTS</span>
+          <span class="pf-tag">Signal Processing</span>
+        </div>
+      </div>
+
+      <div class="pf-proj-card">
+        <span class="pf-proj-badge">PRICAI 2021 · Q2</span>
+        <h3 class="pf-proj-title">Vietnamese-English Code-Switching TTS</h3>
+        <p class="pf-proj-desc">TTS system for Vietnamese-English mixed speech using Tacotron-2 with speaker and language embeddings. Handles code-switching input via a grapheme-to-syllable model.</p>
+        <div class="pf-proj-tags">
+          <span class="pf-tag">Speech Synthesis</span>
+          <span class="pf-tag">NLP</span>
+          <span class="pf-tag">Tacotron-2</span>
+        </div>
+      </div>
+
+      <div class="pf-proj-card">
+        <span class="pf-proj-badge">ACIIDS 2022 · Q2</span>
+        <h3 class="pf-proj-title">Neural News Recommendation</h3>
+        <p class="pf-proj-desc">Attentive neural news recommendation combining user-specific and global news models to recommend both personalized and broadly popular articles.</p>
+        <div class="pf-proj-tags">
+          <span class="pf-tag">Deep Learning</span>
+          <span class="pf-tag">NLP</span>
+          <span class="pf-tag">Recommendation</span>
+        </div>
+      </div>
+
+      <div class="pf-proj-card">
+        <span class="pf-proj-badge">Bachelor's Thesis · 10/10</span>
+        <h3 class="pf-proj-title">Recommendation System Research</h3>
+        <p class="pf-proj-desc">Research to improve the quality of recommendation systems. Scored 10/10 — Top 0.01% in graduating class at PTIT.</p>
+        <div class="pf-proj-tags">
+          <span class="pf-tag">Machine Learning</span>
+          <span class="pf-tag">Research</span>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ── PUBLICATIONS ─────────────────────────────────────────────── -->
+  <section id="panel-publications" class="pf-panel" role="tabpanel" tabindex="0" hidden>
+
+    <div class="pf-section-header"><h2>Publications</h2></div>
+
+    <ul class="pf-pub-list">
+
+      <li class="pf-pub-item">
+        <p class="pf-pub-number">5 · 2025</p>
+        <p class="pf-pub-title"><a href="#">TeBaAb: Text-based antigen-conditioned antibody redesign</a></p>
+        <p class="pf-pub-authors"><strong>Cuong Manh Nguyen</strong>, Huy-Hoang Do-Huu, Viet Thanh Duy Nguyen, Truong-Son Hy</p>
+        <div class="pf-pub-venue-row">
+          <span class="pf-venue-chip">NeurIPS 2025 Workshop</span>
+          <span class="pf-submitted-chip">Submitted</span>
+        </div>
+      </li>
+
+      <li class="pf-pub-item">
+        <p class="pf-pub-number">4 · 2022</p>
+        <p class="pf-pub-title"><a href="#">Combining User Specific and Global News Features for Neural News Recommendation</a></p>
+        <p class="pf-pub-authors"><strong>Cuong Manh Nguyen</strong>, Xuan Bach Nguyen, Minh Phuong Tu</p>
+        <div class="pf-pub-venue-row">
+          <span class="pf-venue-chip">ACIIDS 2022</span>
+          <span class="pf-pub-detail">Springer LNCS · CORE B/Q2</span>
+        </div>
+      </li>
+
+      <li class="pf-pub-item">
+        <p class="pf-pub-number">3 · 2021</p>
+        <p class="pf-pub-title"><a href="#">Learning Vietnamese-English Code-Switching Speech Synthesis Model Under Limited Code-Switched Data Scenario</a></p>
+        <p class="pf-pub-authors"><strong>Cuong Manh Nguyen</strong> et al.</p>
+        <div class="pf-pub-venue-row">
+          <span class="pf-venue-chip">PRICAI 2021</span>
+          <span class="pf-pub-detail">Springer LNAI · CORE B/Q2</span>
+        </div>
+      </li>
+
+      <li class="pf-pub-item">
+        <p class="pf-pub-number">2 · 2021</p>
+        <p class="pf-pub-title"><a href="#">Multi-Task Text Normalization Approach for Speech Synthesis</a></p>
+        <p class="pf-pub-authors">Thi Cuc Bui, <strong>Cuong Manh Nguyen</strong> et al.</p>
+        <div class="pf-pub-venue-row">
+          <span class="pf-venue-chip">PRICAI 2021</span>
+          <span class="pf-pub-detail">Springer LNAI · CORE B/Q2</span>
+        </div>
+      </li>
+
+      <li class="pf-pub-item">
+        <p class="pf-pub-number">1 · 2020</p>
+        <p class="pf-pub-title"><a href="#">Development of Smartcall Vietnamese Text-to-Speech for VLSP 2020</a></p>
+        <p class="pf-pub-authors"><strong>Cuong Manh Nguyen</strong> et al.</p>
+        <div class="pf-pub-venue-row">
+          <span class="pf-venue-chip">VLSP 2020</span>
+          <span class="pf-pub-detail">ACL · Leading regional Vietnamese NLP workshop</span>
+        </div>
+      </li>
+
+    </ul>
+  </section>
+
+  <!-- ── AWARDS ───────────────────────────────────────────────────── -->
+  <section id="panel-awards" class="pf-panel" role="tabpanel" tabindex="0" hidden>
+
+    <div class="pf-section-header"><h2>Honors &amp; Awards</h2></div>
+
+    <ul class="pf-award-list">
+
+      <li class="pf-award-item">
+        <span class="pf-award-icon" aria-hidden="true">🥇</span>
+        <div class="pf-award-body">
+          <p class="pf-award-name">1st Prize — Text-to-Speech Category</p>
+          <p class="pf-award-org">Vietnamese Language &amp; Speech Processing (VLSP) 2020</p>
+        </div>
+        <span class="pf-award-year">2020</span>
+      </li>
+
+      <li class="pf-award-item">
+        <span class="pf-award-icon" aria-hidden="true">🏅</span>
+        <div class="pf-award-body">
+          <p class="pf-award-name">Top 10 Finalists — National Digital Race</p>
+          <p class="pf-award-org">FPT Corporation</p>
+        </div>
+        <span class="pf-award-year">2020</span>
+      </li>
+
+      <li class="pf-award-item">
+        <span class="pf-award-icon" aria-hidden="true">🥈</span>
+        <div class="pf-award-body">
+          <p class="pf-award-name">3rd Prize — ACM/ICPC PTIT</p>
+          <p class="pf-award-org">Top 6 of 174 competing teams</p>
+        </div>
+        <span class="pf-award-year">2019</span>
+      </li>
+
+      <li class="pf-award-item">
+        <span class="pf-award-icon" aria-hidden="true">🏅</span>
+        <div class="pf-award-body">
+          <p class="pf-award-name">Consolation Prize — ACM/ICPC PTIT</p>
+          <p class="pf-award-org">Post &amp; Telecommunication Institute of Technology</p>
+        </div>
+        <span class="pf-award-year">2018</span>
+      </li>
+
+      <li class="pf-award-item">
+        <span class="pf-award-icon" aria-hidden="true">📚</span>
+        <div class="pf-award-body">
+          <p class="pf-award-name">Academic Scholarship</p>
+          <p class="pf-award-org">Post &amp; Telecommunication Institute of Technology</p>
+        </div>
+        <span class="pf-award-year">2018, 2019, 2020</span>
+      </li>
+
+    </ul>
+  </section>
+
+  <!-- ── LIFESTYLE ─────────────────────────────────────────────────── -->
+  <section id="panel-lifestyle" class="pf-panel" role="tabpanel" tabindex="0" hidden>
+
+    <div class="pf-section-header">
+      <h2>My Life Outside Code</h2>
+    </div>
+    <p class="pf-lifestyle-intro">When I'm not training models, I'm training myself.</p>
+
+    <div class="pf-photo-grid">
+
+      <!-- Running — existing image -->
+      <div class="pf-photo-card pf-photo-card--tall">
+        <img class="pf-photo-card__img" src="{{ site.baseurl_root }}/images/run_wp.png" alt="Running and marathon training">
+        <div class="pf-photo-card__body">
+          <p class="pf-photo-card__activity">🏃 Running</p>
+          <p class="pf-photo-card__caption">Marathon training &amp; road races</p>
+        </div>
+      </div>
+
+      <!-- Trekking — PLACEHOLDER: replace with your trekking photo, e.g. /images/trekking.jpg -->
+      <div class="pf-photo-card">
+        <div class="pf-photo-placeholder">
+          <span class="pf-placeholder-icon">🏔</span>
+          <span class="pf-placeholder-hint">Add trekking photo</span>
+        </div>
+        <div class="pf-photo-card__body">
+          <p class="pf-photo-card__activity">🏔 Trekking</p>
+          <p class="pf-photo-card__caption">Into the mountains</p>
+        </div>
+      </div>
+
+      <!-- Badminton — PLACEHOLDER: replace with your badminton photo, e.g. /images/badminton.jpg -->
+      <div class="pf-photo-card">
+        <div class="pf-photo-placeholder">
+          <span class="pf-placeholder-icon">🏸</span>
+          <span class="pf-placeholder-hint">Add badminton photo</span>
+        </div>
+        <div class="pf-photo-card__body">
+          <p class="pf-photo-card__activity">🏸 Badminton</p>
+          <p class="pf-photo-card__caption">Weekly smash sessions</p>
+        </div>
+      </div>
+
+      <!-- Marathon highlight — existing image, spans 2 columns -->
+      <div class="pf-photo-card pf-photo-card--wide">
+        <img class="pf-photo-card__img" src="{{ site.baseurl_root }}/images/mc.jpg" alt="Marathon race highlight">
+        <div class="pf-photo-card__body">
+          <p class="pf-photo-card__activity">🏅 Marathon</p>
+          <p class="pf-photo-card__caption">Race day highlights</p>
+        </div>
+      </div>
+
+      <!-- More adventures — PLACEHOLDER: add more lifestyle photos as needed -->
+      <div class="pf-photo-card">
+        <div class="pf-photo-placeholder">
+          <span class="pf-placeholder-icon">🌿</span>
+          <span class="pf-placeholder-hint">Add more photos</span>
+        </div>
+        <div class="pf-photo-card__body">
+          <p class="pf-photo-card__activity">🌿 More Adventures</p>
+          <p class="pf-photo-card__caption">Life in motion</p>
+        </div>
+      </div>
+
+    </div>
+
+    <p class="pf-photo-hint">
+      📸 Drop photos into <code>/images/</code> and replace the placeholder <code>&lt;div&gt;</code>
+      blocks with <code>&lt;img class="pf-photo-card__img" src="/images/your-photo.jpg" alt="..."&gt;</code>
     </p>
-    <div class="portfolio-hero__links">
-      <a href="#" class="portfolio-hero__link portfolio-hero__link--primary">🔗 LinkedIn</a>
-      <a href="https://github.com/cuongnm5" class="portfolio-hero__link portfolio-hero__link--secondary" target="_blank" rel="noopener noreferrer">GitHub</a>
-      <a href="#" class="portfolio-hero__link portfolio-hero__link--secondary">Google Scholar</a>
-      <a href="mailto:s.cuongnm5@gmail.com" class="portfolio-hero__link portfolio-hero__link--secondary">✉️ Email</a>
-    </div>
-  </div>
 
-  <!-- TAB BAR -->
-  <div class="portfolio-tabs" role="tablist" aria-label="Portfolio sections">
-    <button id="tab-experience" class="portfolio-tab active" data-tab="experience" role="tab" aria-selected="true" aria-controls="panel-experience">💼 EXPERIENCE</button>
-    <button id="tab-projects" class="portfolio-tab" data-tab="projects" role="tab" aria-selected="false" aria-controls="panel-projects">🚀 PROJECTS</button>
-    <button id="tab-certifications" class="portfolio-tab" data-tab="certifications" role="tab" aria-selected="false" aria-controls="panel-certifications">📜 CERTIFICATIONS</button>
-    <button id="tab-publications" class="portfolio-tab" data-tab="publications" role="tab" aria-selected="false" aria-controls="panel-publications">📚 PUBLICATIONS</button>
-    <button id="tab-volunteering" class="portfolio-tab" data-tab="volunteering" role="tab" aria-selected="false" aria-controls="panel-volunteering">🤝 VOLUNTEERING</button>
-    <button id="tab-awards" class="portfolio-tab" data-tab="awards" role="tab" aria-selected="false" aria-controls="panel-awards">🏆 AWARDS</button>
-  </div>
+  </section>
 
-  <!-- CONTENT PANELS -->
-  <div class="portfolio-content">
+</div><!-- .pf-panels -->
 
-    <!-- EXPERIENCE -->
-    <div id="panel-experience" class="tab-panel active" role="tabpanel" aria-labelledby="tab-experience" tabindex="0">
-      <h2 class="section-title">Leadership &amp; Experience</h2>
-      <ul class="timeline">
-        <li class="timeline-item">
-          <div class="timeline-track"></div>
-          <div class="timeline-body">
-            <div class="timeline-header">
-              <h3 class="timeline-role">President, Programming PTIT Club (ProPTIT)</h3>
-              <span class="timeline-date">12/2019 — 12/2020</span>
-            </div>
-            <p class="timeline-org">Post &amp; Telecommunication Institute of Technology (PTIT) · Volunteer</p>
-            <p class="timeline-desc">Led a dynamic programming club for university students. Organized fundamental programming and AI courses (C, C++, Java, Data Structures, AI). Managed academic competitions, events, communications, and club finances.</p>
-          </div>
-        </li>
-      </ul>
-    </div>
+<!-- ================================================================
+     JAVASCRIPT
+     ================================================================ -->
+<script>
+(function () {
+  'use strict';
 
-    <!-- PROJECTS -->
-    <div id="panel-projects" class="tab-panel" role="tabpanel" aria-labelledby="tab-projects" tabindex="0">
-      <h2 class="section-title">Projects</h2>
-      <div class="card-grid">
-        <div class="portfolio-card">
-          <h3 class="card-title">Vietnamese TTS for VLSP 2020</h3>
-          <p class="card-desc">End-to-end Vietnamese TTS system combining Tacotron-2, HiFiGAN vocoder, and WaveGlow denoiser. Achieved MOS 3.77 / 4.22 natural speech — best result in VLSP 2020 TTS evaluation.</p>
-          <div class="card-tags">
-            <span class="tag tag--primary">Deep Learning</span>
-            <span class="tag tag--secondary">TTS</span>
-            <span class="tag tag--secondary">Python</span>
-            <span class="tag tag--secondary">Signal Processing</span>
-          </div>
-        </div>
-        <div class="portfolio-card portfolio-card--amber">
-          <h3 class="card-title">Vietnamese-English Code-Switching TTS</h3>
-          <p class="card-desc">TTS system for Vietnamese-English mixed speech using Tacotron-2 with speaker and language embeddings. Handles CS input via a grapheme-to-syllable model.</p>
-          <div class="card-tags">
-            <span class="tag tag--primary">Speech Synthesis</span>
-            <span class="tag tag--secondary">NLP</span>
-            <span class="tag tag--secondary">Tacotron-2</span>
-          </div>
-        </div>
-        <div class="portfolio-card">
-          <h3 class="card-title">Neural News Recommendation</h3>
-          <p class="card-desc">Attentive neural news recommendation combining user-specific and global news models to recommend both personalized and broadly popular articles.</p>
-          <div class="card-tags">
-            <span class="tag tag--primary">Deep Learning</span>
-            <span class="tag tag--secondary">NLP</span>
-            <span class="tag tag--secondary">Recommendation Systems</span>
-          </div>
-        </div>
-        <div class="portfolio-card portfolio-card--amber">
-          <h3 class="card-title">Recommendation System — Bachelor's Thesis</h3>
-          <p class="card-desc">Research to improve the quality of recommendation systems. Scored 10/10 — Top 0.01% in class.</p>
-          <div class="card-tags">
-            <span class="tag tag--primary">Machine Learning</span>
-            <span class="tag tag--secondary">Research</span>
-          </div>
-        </div>
-      </div>
-    </div>
+  // ── Tab switching ──────────────────────────────────────────────
+  var tabs   = Array.from(document.querySelectorAll('.pf-tab'));
+  var panels = Array.from(document.querySelectorAll('.pf-panel'));
 
-    <!-- CERTIFICATIONS -->
-    <div id="panel-certifications" class="tab-panel" role="tabpanel" aria-labelledby="tab-certifications" tabindex="0">
-      <h2 class="section-title">Licenses &amp; Certifications</h2>
-      <div class="card-grid">
-        <div class="portfolio-card">
-          <h3 class="card-title">Certifications</h3>
-          <p class="card-desc">Certifications will be listed here. Check back soon.</p>
-        </div>
-      </div>
-    </div>
+  function activateTab(tab) {
+    tabs.forEach(function (t) {
+      t.classList.remove('active');
+      t.setAttribute('aria-selected', 'false');
+      t.setAttribute('tabindex', '-1');
+    });
+    panels.forEach(function (p) {
+      p.classList.remove('active');
+      p.hidden = true;
+    });
+    tab.classList.add('active');
+    tab.setAttribute('aria-selected', 'true');
+    tab.setAttribute('tabindex', '0');
+    var panel = document.getElementById('panel-' + tab.getAttribute('data-tab'));
+    panel.classList.add('active');
+    panel.hidden = false;
+  }
 
-    <!-- PUBLICATIONS -->
-    <div id="panel-publications" class="tab-panel" role="tabpanel" aria-labelledby="tab-publications" tabindex="0">
-      <h2 class="section-title">Publications</h2>
-      <ul class="pub-list">
-        <li class="pub-item">
-          <p class="pub-title"><a href="#">Learning Vietnamese-English code-switching speech synthesis model under limited code-switched data scenario</a></p>
-          <p class="pub-meta">Cuong Manh Nguyen et al. · <span class="pub-venue">PRICAI 2021</span> (Pacific Rim International Conference on Artificial Intelligence — Q2)</p>
-          <div class="pub-links">
-            <a href="#" class="pub-link pub-link--secondary">🔗 Scholar</a>
-          </div>
-        </li>
-        <li class="pub-item">
-          <p class="pub-title"><a href="#">Combining User Specific and Global News Features for Neural News Recommendation</a></p>
-          <p class="pub-meta">Cuong Manh Nguyen et al. · <span class="pub-venue">ACIIDS 2021</span> (Asian Conference on Intelligent Information and Database Systems — Q2)</p>
-          <div class="pub-links">
-            <a href="#" class="pub-link pub-link--secondary">🔗 Scholar</a>
-          </div>
-        </li>
-        <li class="pub-item">
-          <p class="pub-title"><a href="#">Development of Smartcall Vietnamese Text-to-Speech for VLSP 2020</a></p>
-          <p class="pub-meta">Cuong Manh Nguyen et al. · <span class="pub-venue">VLSP 2020</span> (International Workshop on Vietnamese Language and Speech Processing)</p>
-          <div class="pub-links">
-            <a href="#" class="pub-link pub-link--secondary">🔗 Scholar</a>
-          </div>
-        </li>
-      </ul>
-    </div>
+  tabs.forEach(function (tab, idx) {
+    tab.addEventListener('click', function () { activateTab(this); });
+    tab.addEventListener('keydown', function (e) {
+      var i = tabs.indexOf(this);
+      if (e.key === 'ArrowRight') { e.preventDefault(); activateTab(tabs[(i + 1) % tabs.length]); }
+      if (e.key === 'ArrowLeft')  { e.preventDefault(); activateTab(tabs[(i - 1 + tabs.length) % tabs.length]); }
+      if (e.key === 'Home')       { e.preventDefault(); activateTab(tabs[0]); }
+      if (e.key === 'End')        { e.preventDefault(); activateTab(tabs[tabs.length - 1]); }
+    });
+  });
 
-    <!-- VOLUNTEERING -->
-    <div id="panel-volunteering" class="tab-panel" role="tabpanel" aria-labelledby="tab-volunteering" tabindex="0">
-      <h2 class="section-title">Volunteering</h2>
-      <ul class="timeline">
-        <li class="timeline-item">
-          <div class="timeline-track"></div>
-          <div class="timeline-body">
-            <div class="timeline-header">
-              <h3 class="timeline-role">Community Volunteer</h3>
-              <span class="timeline-date">2017 — Present</span>
-            </div>
-            <p class="timeline-org">Various Organizations · Volunteer</p>
-            <p class="timeline-desc">Supported milk distribution for the elderly at Ho Chi Minh City Oncology Hospital. Participated in the "Cleaning House, Cleaning Heart" program. Accompanied Nuoi Em non-profit to visit Vietnamese children in Cambodia.</p>
-          </div>
-        </li>
-        <li class="timeline-item">
-          <div class="timeline-track timeline-track--secondary"></div>
-          <div class="timeline-body">
-            <div class="timeline-header">
-              <h3 class="timeline-role">Group Leader</h3>
-              <span class="timeline-date">08/2017 — 11/2017</span>
-            </div>
-            <p class="timeline-org">Mid-Autumn for Children — Lighting Up Vietnamese Childhood · Volunteer</p>
-            <p class="timeline-desc">Led a volunteer blood donation drive during the Mid-Autumn Festival. Mobilized community participation, managed team members, and supported blood donation applications on the event day.</p>
-          </div>
-        </li>
-      </ul>
-    </div>
+  // ── App Bar scroll shadow ──────────────────────────────────────
+  var appBar = document.getElementById('pf-app-bar');
+  window.addEventListener('scroll', function () {
+    appBar.classList.toggle('scrolled', window.scrollY > 10);
+  }, { passive: true });
 
-    <!-- AWARDS -->
-    <div id="panel-awards" class="tab-panel" role="tabpanel" aria-labelledby="tab-awards" tabindex="0">
-      <h2 class="section-title">Honors &amp; Awards</h2>
-      <ul class="award-list">
-        <li class="award-item">
-          <span class="award-icon">🥇</span>
-          <div class="award-body">
-            <p class="award-name">First Prize — Text-to-Speech Category</p>
-            <p class="award-issuer">Vietnamese Language and Speech Processing (VLSP) 2020</p>
-          </div>
-          <span class="award-year">2020</span>
-        </li>
-        <li class="award-item">
-          <span class="award-icon">🥈</span>
-          <div class="award-body">
-            <p class="award-name">Second Prize (University Round) &amp; Top 10 Finalists (National Round)</p>
-            <p class="award-issuer">Digital Race 2020, FPT</p>
-          </div>
-          <span class="award-year">2020</span>
-        </li>
-        <li class="award-item">
-          <span class="award-icon">🏆</span>
-          <div class="award-body">
-            <p class="award-name">Third Prize — ACM/ICPC PTIT 2019</p>
-            <p class="award-issuer">Top 6 out of 174 teams</p>
-          </div>
-          <span class="award-year">2019</span>
-        </li>
-      </ul>
-    </div>
+  // ── Mobile nav drawer ─────────────────────────────────────────
+  var menuBtn = document.getElementById('pf-menu-btn');
+  var overlay = document.getElementById('pf-nav-overlay');
+  var drawer  = document.getElementById('pf-nav-drawer');
 
-  </div><!-- .portfolio-content -->
+  function openNav() {
+    overlay.classList.add('open');
+    overlay.removeAttribute('aria-hidden');
+    drawer.classList.add('open');
+    drawer.removeAttribute('hidden');
+    menuBtn.setAttribute('aria-expanded', 'true');
+    document.body.style.overflow = 'hidden';
+  }
 
-  <!-- TAB SWITCHING JS -->
-  <script>
-    (function () {
-      var tabs = Array.from(document.querySelectorAll('.portfolio-tab'));
-      var panels = document.querySelector('.portfolio-content');
+  function closeNav() {
+    overlay.classList.remove('open');
+    overlay.setAttribute('aria-hidden', 'true');
+    drawer.classList.remove('open');
+    drawer.hidden = true;
+    menuBtn.setAttribute('aria-expanded', 'false');
+    document.body.style.overflow = '';
+  }
 
-      function activateTab(tab) {
-        tabs.forEach(function (t) {
-          t.classList.remove('active');
-          t.setAttribute('aria-selected', 'false');
-          t.setAttribute('tabindex', '-1');
-        });
-        panels.querySelectorAll('.tab-panel').forEach(function (p) {
-          p.classList.remove('active');
-        });
-        tab.classList.add('active');
-        tab.setAttribute('aria-selected', 'true');
-        tab.setAttribute('tabindex', '0');
-        document.getElementById('panel-' + tab.getAttribute('data-tab')).classList.add('active');
-        tab.focus();
-      }
+  menuBtn.addEventListener('click', openNav);
+  overlay.addEventListener('click', closeNav);
 
-      tabs.forEach(function (tab, index) {
-        tab.setAttribute('tabindex', index === 0 ? '0' : '-1');
-        tab.addEventListener('click', function () {
-          activateTab(this);
-        });
-        tab.addEventListener('keydown', function (e) {
-          var idx = tabs.indexOf(this);
-          if (e.key === 'ArrowRight') {
-            e.preventDefault();
-            activateTab(tabs[(idx + 1) % tabs.length]);
-          } else if (e.key === 'ArrowLeft') {
-            e.preventDefault();
-            activateTab(tabs[(idx - 1 + tabs.length) % tabs.length]);
-          } else if (e.key === 'Home') {
-            e.preventDefault();
-            activateTab(tabs[0]);
-          } else if (e.key === 'End') {
-            e.preventDefault();
-            activateTab(tabs[tabs.length - 1]);
-          }
-        });
-      });
-    }());
-  </script>
-
-</div><!-- .portfolio-page -->
+  document.addEventListener('keydown', function (e) {
+    if (e.key === 'Escape' && drawer.classList.contains('open')) closeNav();
+  });
+}());
+</script>
