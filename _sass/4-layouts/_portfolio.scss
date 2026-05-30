@@ -4,24 +4,24 @@
 // =====================================================================
 
 .pf-page {
-  // ── MD3 Color Tokens ──────────────────────────────────────────────
-  --md-primary: #006874;
+  // ── MD3 Color Tokens — orange / amber ────────────────────────────
+  --md-primary: #C05F00;
   --md-on-primary: #ffffff;
-  --md-primary-container: #97f0ff;
-  --md-on-primary-container: #001f24;
-  --md-secondary: #4a6267;
+  --md-primary-container: #FFDDB0;
+  --md-on-primary-container: #2D1500;
+  --md-secondary: #705D4E;
   --md-on-secondary: #ffffff;
-  --md-secondary-container: #cde7ec;
-  --md-on-secondary-container: #051f23;
-  --md-surface: #fafdfd;
+  --md-secondary-container: #FBD9C0;
+  --md-on-secondary-container: #271710;
+  --md-surface: #FFFBF5;
   --md-surface-container-lowest: #ffffff;
-  --md-surface-container-low: #f0fafb;
-  --md-surface-container: #e4f3f5;
-  --md-surface-container-high: #deedf0;
-  --md-on-surface: #161d1e;
-  --md-on-surface-variant: #3f484a;
-  --md-outline: #6f797a;
-  --md-outline-variant: #bec8ca;
+  --md-surface-container-low: #FFF5EB;
+  --md-surface-container: #FFEEDE;
+  --md-surface-container-high: #F8E8D4;
+  --md-on-surface: #201B16;
+  --md-on-surface-variant: #514540;
+  --md-outline: #827067;
+  --md-outline-variant: #D4C4B8;
 
   font-family: 'Roboto', sans-serif;
   background: var(--md-surface);
@@ -413,7 +413,7 @@
     color: var(--md-on-primary);
 
     &:hover {
-      box-shadow: 0 2px 8px rgba(0, 104, 116, 0.4);
+      box-shadow: 0 2px 8px rgba(192, 95, 0, 0.4);
       color: var(--md-on-primary);
     }
   }
@@ -553,7 +553,7 @@
   transition: box-shadow 0.2s;
 
   &:hover {
-    box-shadow: 0 3px 12px rgba(0, 104, 116, 0.12);
+    box-shadow: 0 3px 12px rgba(192, 95, 0, 0.12);
   }
 }
 
@@ -622,7 +622,7 @@
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.06);
 
   &:hover {
-    box-shadow: 0 4px 16px rgba(0, 104, 116, 0.14);
+    box-shadow: 0 4px 16px rgba(192, 95, 0, 0.14);
     transform: translateY(-2px);
   }
 }
@@ -771,7 +771,7 @@
   transition: box-shadow 0.2s;
 
   &:hover {
-    box-shadow: 0 3px 10px rgba(0, 104, 116, 0.1);
+    box-shadow: 0 3px 10px rgba(192, 95, 0, 0.1);
   }
 }
 
