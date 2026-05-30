@@ -6,17 +6,14 @@ layout: portfolio-base
      TOP APP BAR
      ================================================================ -->
 <header class="pf-app-bar" id="pf-app-bar">
-  <a href="{{ site.baseurl }}/" class="pf-app-bar__brand" aria-label="Cuong Manh Nguyen — Home">
-    <div class="pf-app-bar__monogram" aria-hidden="true">C</div>
-    <span class="pf-app-bar__name">Cuong Manh Nguyen</span>
-  </a>
-
-  <nav class="pf-app-bar__nav" aria-label="Site navigation">
-    <a href="{{ site.baseurl }}/portfolio/" class="pf-app-bar__nav-link active">Portfolio</a>
-  </nav>
-
-  <a href="mailto:s.cuongnm5@gmail.com" class="pf-icon-btn" aria-label="Email Cuong">✉</a>
-
+  <div class="pf-app-bar__center" role="tablist" aria-label="Portfolio navigation">
+    <button id="tab-home"     class="pf-nav-tab active" data-tab="home"     role="tab" aria-selected="true"  aria-controls="panel-home"     tabindex="0">Home</button>
+    <div class="pf-app-bar__brand">
+      <div class="pf-app-bar__monogram" aria-hidden="true">C</div>
+      <span class="pf-app-bar__name">Cuong Manh Nguyen</span>
+    </div>
+    <button id="tab-projects" class="pf-nav-tab"        data-tab="projects" role="tab" aria-selected="false" aria-controls="panel-projects" tabindex="-1">Projects</button>
+  </div>
   <button class="pf-icon-btn pf-menu-btn" id="pf-menu-btn" aria-label="Open navigation menu" aria-expanded="false">
     ☰
   </button>
@@ -31,17 +28,10 @@ layout: portfolio-base
     <p class="pf-nav-drawer__name">Cuong Manh Nguyen</p>
     <p class="pf-nav-drawer__sub">AI Engineer · Researcher</p>
   </div>
-  <a href="{{ site.baseurl }}/portfolio/" class="pf-nav-drawer__link">Portfolio</a>
+  <button class="pf-nav-drawer__link pf-nav-drawer__tab" data-tab="home">Home</button>
+  <button class="pf-nav-drawer__link pf-nav-drawer__tab" data-tab="projects">Projects</button>
   <a href="mailto:s.cuongnm5@gmail.com" class="pf-nav-drawer__link">✉ Contact</a>
 </nav>
-
-<!-- ================================================================
-     TAB BAR
-     ================================================================ -->
-<div class="pf-tab-bar" role="tablist" aria-label="Portfolio sections">
-  <button id="tab-home"     class="pf-tab active" data-tab="home"     role="tab" aria-selected="true"  aria-controls="panel-home"     tabindex="0">Home</button>
-  <button id="tab-projects" class="pf-tab"        data-tab="projects" role="tab" aria-selected="false" aria-controls="panel-projects" tabindex="-1">Projects</button>
-</div>
 
 <!-- ================================================================
      PANELS
@@ -398,7 +388,7 @@ layout: portfolio-base
   'use strict';
 
   // ── Tab switching ──────────────────────────────────────────────
-  var tabs   = Array.from(document.querySelectorAll('.pf-tab'));
+  var tabs   = Array.from(document.querySelectorAll('.pf-nav-tab'));
   var panels = Array.from(document.querySelectorAll('.pf-panel'));
 
   function activateTab(tab) {
@@ -462,6 +452,14 @@ layout: portfolio-base
 
   menuBtn.addEventListener('click', openNav);
   overlay.addEventListener('click', closeNav);
+
+  Array.from(document.querySelectorAll('.pf-nav-drawer__tab')).forEach(function (btn) {
+    btn.addEventListener('click', function () {
+      var target = tabs.find(function (t) { return t.getAttribute('data-tab') === btn.getAttribute('data-tab'); });
+      if (target) activateTab(target);
+      closeNav();
+    });
+  });
 
   document.addEventListener('keydown', function (e) {
     if (e.key === 'Escape' && drawer.classList.contains('open')) closeNav();
