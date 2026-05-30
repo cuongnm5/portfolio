@@ -665,6 +665,7 @@
   padding: 24px;
   transition: box-shadow 0.2s, transform 0.2s;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.06);
+  cursor: pointer;
 
   &:hover {
     box-shadow: 0 4px 16px rgba(192, 95, 0, 0.14);
@@ -949,6 +950,110 @@
   margin: 0;
 }
 
+// ── Project Detail Modal ───────────────────────────────────────────
+.pf-detail-overlay {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.45);
+  z-index: 500;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+
+  &.open {
+    display: flex;
+  }
+}
+
+.pf-detail-modal {
+  background: var(--md-surface-container-lowest);
+  border-radius: 24px;
+  padding: 36px 40px;
+  max-width: 620px;
+  width: 100%;
+  max-height: 85vh;
+  overflow-y: auto;
+  box-shadow: 0 12px 48px rgba(0, 0, 0, 0.22);
+  position: relative;
+
+  @media (max-width: 600px) {
+    padding: 28px 24px;
+    border-radius: 16px;
+  }
+}
+
+.pf-detail-close {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  border: none;
+  background: var(--md-surface-container);
+  color: var(--md-on-surface-variant);
+  font-size: 14px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.2s;
+
+  &:hover {
+    background: var(--md-surface-container-high);
+  }
+}
+
+.pf-detail-title {
+  font-size: 22px;
+  font-weight: 600;
+  color: var(--md-on-surface);
+  margin: 12px 0 14px;
+  padding-right: 32px;
+}
+
+.pf-detail-desc {
+  font-size: 15px;
+  color: var(--md-on-surface-variant);
+  line-height: 1.7;
+  margin: 0 0 20px;
+}
+
+.pf-detail-draft {
+  margin-top: 28px;
+  padding: 20px;
+  background: var(--md-surface-container);
+  border-radius: 12px;
+  border-left: 4px solid var(--md-primary-container);
+}
+
+.pf-detail-draft__label {
+  font-size: 12px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: var(--md-primary);
+  display: block;
+  margin-bottom: 8px;
+}
+
+.pf-detail-draft__text {
+  font-size: 14px;
+  color: var(--md-on-surface-variant);
+  margin: 0;
+  line-height: 1.6;
+}
+
+.pf-proj-cta {
+  display: block;
+  margin-top: 14px;
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--md-primary);
+}
+
+// ── Photo Hint ────────────────────────────────────────────────────
 .pf-photo-hint {
   background: var(--md-surface-container);
   border: 1px dashed var(--md-outline-variant);

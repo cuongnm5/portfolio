@@ -62,7 +62,7 @@ layout: portfolio-base
         </p>
         <div class="pf-hero-links">
           <a href="https://www.linkedin.com/in/cuongnm5" class="pf-btn pf-btn--filled" target="_blank" rel="noopener noreferrer">LinkedIn</a>
-          <a href="https://scholar.google.com/citations?user=cuongnm5" class="pf-btn pf-btn--tonal" target="_blank" rel="noopener noreferrer">Google Scholar</a>
+          <a href="https://scholar.google.com/citations?user=E_pcCewAAAAJ&hl=en" class="pf-btn pf-btn--tonal" target="_blank" rel="noopener noreferrer">Google Scholar</a>
           <a href="mailto:s.cuongnm5@gmail.com" class="pf-btn pf-btn--tonal">📧 Email</a>
         </div>
       </div>
@@ -135,7 +135,11 @@ layout: portfolio-base
 
     <div class="pf-card-grid">
 
-      <div class="pf-proj-card">
+      <div class="pf-proj-card" role="button" tabindex="0"
+           data-badge="NeurIPS 2025 Workshop · Submitted"
+           data-title="TeBaAb — Antibody Redesign"
+           data-desc="Text-based antigen-conditioned antibody redesign. Research at HySonLab, University of Alabama. Submitted to NeurIPS 2025 Workshop; aiming to publish in Oxford Journal."
+           data-tags="Drug Discovery,Bioinformatics,Python">
         <span class="pf-proj-badge">NeurIPS 2025 Workshop · Submitted</span>
         <h3 class="pf-proj-title">TeBaAb — Antibody Redesign</h3>
         <p class="pf-proj-desc">Text-based antigen-conditioned antibody redesign. Research at HySonLab, University of Alabama. Submitted to NeurIPS 2025 Workshop; aiming to publish in Oxford Journal.</p>
@@ -144,9 +148,14 @@ layout: portfolio-base
           <span class="pf-tag">Bioinformatics</span>
           <span class="pf-tag">Python</span>
         </div>
+        <span class="pf-proj-cta">View details →</span>
       </div>
 
-      <div class="pf-proj-card">
+      <div class="pf-proj-card" role="button" tabindex="0"
+           data-badge="🥇 VLSP 2020 · 1st Prize"
+           data-title="Vietnamese TTS for VLSP 2020"
+           data-desc="End-to-end Vietnamese TTS combining Tacotron-2, HiFiGAN vocoder, and WaveGlow denoiser. Achieved MOS 3.77/4.22 — best result at VLSP 2020 evaluation."
+           data-tags="Deep Learning,TTS,Signal Processing">
         <span class="pf-proj-badge">🥇 VLSP 2020 · 1st Prize</span>
         <h3 class="pf-proj-title">Vietnamese TTS for VLSP 2020</h3>
         <p class="pf-proj-desc">End-to-end Vietnamese TTS combining Tacotron-2, HiFiGAN vocoder, and WaveGlow denoiser. Achieved MOS 3.77/4.22 — best result at VLSP 2020 evaluation.</p>
@@ -155,9 +164,14 @@ layout: portfolio-base
           <span class="pf-tag">TTS</span>
           <span class="pf-tag">Signal Processing</span>
         </div>
+        <span class="pf-proj-cta">View details →</span>
       </div>
 
-      <div class="pf-proj-card">
+      <div class="pf-proj-card" role="button" tabindex="0"
+           data-badge="PRICAI 2021 · Q2"
+           data-title="Vietnamese-English Code-Switching TTS"
+           data-desc="TTS system for Vietnamese-English mixed speech using Tacotron-2 with speaker and language embeddings. Handles code-switching input via a grapheme-to-syllable model."
+           data-tags="Speech Synthesis,NLP,Tacotron-2">
         <span class="pf-proj-badge">PRICAI 2021 · Q2</span>
         <h3 class="pf-proj-title">Vietnamese-English Code-Switching TTS</h3>
         <p class="pf-proj-desc">TTS system for Vietnamese-English mixed speech using Tacotron-2 with speaker and language embeddings. Handles code-switching input via a grapheme-to-syllable model.</p>
@@ -166,9 +180,14 @@ layout: portfolio-base
           <span class="pf-tag">NLP</span>
           <span class="pf-tag">Tacotron-2</span>
         </div>
+        <span class="pf-proj-cta">View details →</span>
       </div>
 
-      <div class="pf-proj-card">
+      <div class="pf-proj-card" role="button" tabindex="0"
+           data-badge="ACIIDS 2022 · Q2"
+           data-title="Neural News Recommendation"
+           data-desc="Attentive neural news recommendation combining user-specific and global news models to recommend both personalized and broadly popular articles."
+           data-tags="Deep Learning,NLP,Recommendation">
         <span class="pf-proj-badge">ACIIDS 2022 · Q2</span>
         <h3 class="pf-proj-title">Neural News Recommendation</h3>
         <p class="pf-proj-desc">Attentive neural news recommendation combining user-specific and global news models to recommend both personalized and broadly popular articles.</p>
@@ -177,9 +196,14 @@ layout: portfolio-base
           <span class="pf-tag">NLP</span>
           <span class="pf-tag">Recommendation</span>
         </div>
+        <span class="pf-proj-cta">View details →</span>
       </div>
 
-      <div class="pf-proj-card">
+      <div class="pf-proj-card" role="button" tabindex="0"
+           data-badge="Bachelor's Thesis · 10/10"
+           data-title="Recommendation System Research"
+           data-desc="Research to improve the quality of recommendation systems. Scored 10/10 — Top 0.01% in graduating class at PTIT."
+           data-tags="Machine Learning,Research">
         <span class="pf-proj-badge">Bachelor's Thesis · 10/10</span>
         <h3 class="pf-proj-title">Recommendation System Research</h3>
         <p class="pf-proj-desc">Research to improve the quality of recommendation systems. Scored 10/10 — Top 0.01% in graduating class at PTIT.</p>
@@ -187,10 +211,26 @@ layout: portfolio-base
           <span class="pf-tag">Machine Learning</span>
           <span class="pf-tag">Research</span>
         </div>
+        <span class="pf-proj-cta">View details →</span>
       </div>
 
     </div>
   </section>
+
+  <!-- ── PROJECT DETAIL MODAL ─────────────────────────────────────── -->
+  <div class="pf-detail-overlay" id="pf-detail-overlay" aria-hidden="true">
+    <div class="pf-detail-modal" role="dialog" aria-modal="true" aria-labelledby="pf-detail-title">
+      <button class="pf-detail-close" id="pf-detail-close" aria-label="Close">✕</button>
+      <span class="pf-proj-badge" id="pf-detail-badge"></span>
+      <h2 class="pf-detail-title" id="pf-detail-title"></h2>
+      <p class="pf-detail-desc" id="pf-detail-desc"></p>
+      <div class="pf-proj-tags" id="pf-detail-tags"></div>
+      <div class="pf-detail-draft">
+        <span class="pf-detail-draft__label">📝 Draft</span>
+        <p class="pf-detail-draft__text">Full case study coming soon — write-up, results, and visuals in progress.</p>
+      </div>
+    </div>
+  </div>
 
   <!-- ── PUBLICATIONS ─────────────────────────────────────────────── -->
   <section id="panel-publications" class="pf-panel" role="tabpanel" tabindex="0" aria-labelledby="tab-publications" hidden>
@@ -455,6 +495,47 @@ layout: portfolio-base
   menuBtn.addEventListener('click', openNav);
   overlay.addEventListener('click', closeNav);
 
+  // ── Project detail modal ──────────────────────────────────────
+  var detailOverlay = document.getElementById('pf-detail-overlay');
+  var detailClose   = document.getElementById('pf-detail-close');
+
+  function openDetail(card) {
+    document.getElementById('pf-detail-badge').textContent = card.dataset.badge;
+    document.getElementById('pf-detail-title').textContent = card.dataset.title;
+    document.getElementById('pf-detail-desc').textContent  = card.dataset.desc;
+    var tagsEl = document.getElementById('pf-detail-tags');
+    tagsEl.innerHTML = card.dataset.tags.split(',').map(function (t) {
+      return '<span class="pf-tag">' + t.trim() + '</span>';
+    }).join('');
+    detailOverlay.classList.add('open');
+    detailOverlay.removeAttribute('aria-hidden');
+    document.body.style.overflow = 'hidden';
+    detailClose.focus();
+  }
+
+  function closeDetail() {
+    detailOverlay.classList.remove('open');
+    detailOverlay.setAttribute('aria-hidden', 'true');
+    document.body.style.overflow = '';
+  }
+
+  Array.from(document.querySelectorAll('.pf-proj-card')).forEach(function (card) {
+    card.addEventListener('click', function () { openDetail(this); });
+    card.addEventListener('keydown', function (e) {
+      if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); openDetail(this); }
+    });
+  });
+
+  detailClose.addEventListener('click', closeDetail);
+  detailOverlay.addEventListener('click', function (e) {
+    if (e.target === detailOverlay) closeDetail();
+  });
+
+  document.addEventListener('keydown', function (e) {
+    if (e.key === 'Escape' && detailOverlay.classList.contains('open')) closeDetail();
+  });
+
+  // ── Mobile nav drawer tabs ────────────────────────────────────
   Array.from(document.querySelectorAll('.pf-nav-drawer__tab')).forEach(function (btn) {
     btn.addEventListener('click', function () {
       var target = tabs.find(function (t) { return t.getAttribute('data-tab') === btn.getAttribute('data-tab'); });
