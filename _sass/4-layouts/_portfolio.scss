@@ -779,67 +779,65 @@ body.mp-page .mp-modal__title           { color: var(--mp-text); }
   margin-top: 2px;
 }
 
-// ── Lifestyle ─────────────────────────────────────────────────────
-.mp-lifestyle__intro {
-  font-size: 1rem;
-  color: var(--mp-muted);
-  font-style: italic;
-  margin: -32px 0 36px;
-}
-
-.mp-photo-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: repeat(2, 240px);
-  gap: 16px;
-  margin-bottom: 24px;
-
-  @media (max-width: 900px) { grid-template-columns: repeat(2, 1fr); grid-template-rows: auto; }
-  @media (max-width: 600px) { grid-template-columns: 1fr; }
-}
-
-.mp-photo-card {
-  border-radius: 16px;
-  overflow: hidden;
+// ── Lifestyle timeline entries ─────────────────────────────────────
+.mp-timeline-list {
   display: flex;
   flex-direction: column;
-  background: var(--mp-bg);
-  transition: transform 0.2s, box-shadow 0.2s;
-
-  &:hover { transform: scale(1.02); box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15); }
-  &--tall { grid-row: span 2; }
-  &--wide { grid-column: span 2;
-    @media (max-width: 900px) { grid-column: span 1; } }
+  gap: 14px;
 }
 
-.mp-photo-card__img { width: 100%; flex: 1; object-fit: cover; display: block; min-height: 0; }
+.mp-timeline-entry {
+  display: flex;
+  gap: 16px;
+  align-items: flex-start;
+  padding: 14px;
+  background: var(--mp-bg);
+  border-radius: 12px;
+  border-left: 3px solid var(--mp-primary);
+}
 
-.mp-photo-placeholder {
-  flex: 1;
+.mp-timeline-entry__img {
+  width: 90px;
+  height: 65px;
+  object-fit: cover;
+  border-radius: 8px;
+  flex-shrink: 0;
+}
+
+.mp-timeline-entry__placeholder {
+  width: 90px;
+  height: 65px;
+  border-radius: 8px;
+  flex-shrink: 0;
   background: linear-gradient(135deg, #FFF0E0, #FFD9B0);
   display: flex;
-  flex-direction: column;
   align-items: center;
   justify-content: center;
-  gap: 8px;
-  min-height: 160px;
+  font-size: 1.5rem;
 }
 
-.mp-placeholder-icon { font-size: 40px; }
-.mp-placeholder-hint { font-size: 12px; color: #C07020; opacity: 0.8; }
+.mp-timeline-entry__body { flex: 1; min-width: 0; }
 
-.mp-photo-card__body { padding: 12px 16px; background: var(--mp-surface); flex-shrink: 0; }
-.mp-photo-card__activity { font-size: 0.85rem; font-weight: 600; color: var(--mp-text); margin: 0 0 2px; }
-.mp-photo-card__caption  { font-size: 0.8rem;  color: var(--mp-muted); margin: 0; }
+.mp-timeline-entry__date {
+  display: inline-block;
+  font-size: 0.68rem;
+  font-weight: 700;
+  color: #fff;
+  padding: 2px 8px;
+  border-radius: 6px;
+  margin-bottom: 6px;
+}
 
-.mp-photo-hint {
-  background: var(--mp-bg);
-  border: 1px dashed var(--mp-border);
-  border-radius: 12px;
-  padding: 12px 20px;
+.mp-timeline-entry__title {
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: var(--mp-text);
+  margin: 0 0 4px;
+}
+
+.mp-timeline-entry__desc {
   font-size: 0.82rem;
   color: var(--mp-muted);
-  text-align: center;
-
-  code { background: var(--mp-surface); padding: 1px 6px; border-radius: 4px; font-size: 0.78rem; }
+  margin: 0;
+  line-height: 1.5;
 }
