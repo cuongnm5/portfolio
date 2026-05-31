@@ -429,6 +429,7 @@ layout: portfolio-base
     var badgeEl = document.getElementById('mp-modal-badge');
     badgeEl.textContent = p.badge;
     badgeEl.style.background = p.color || '';
+    badgeEl.style.color = p.color ? '#fff' : '';
 
     document.getElementById('mp-modal-title').textContent = p.title;
     document.getElementById('mp-modal-desc').textContent  = p.desc;
