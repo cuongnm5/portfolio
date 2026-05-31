@@ -5,7 +5,7 @@ layout: portfolio-base
 <!-- ================================================================
      NAVBAR
      ================================================================ -->
-<nav class="mp-nav" id="mp-nav">
+<nav class="mp-nav" id="mp-nav" aria-label="Main navigation">
   <a class="mp-nav__logo" href="#home" id="mp-logo">Cuong.</a>
 
   <div class="mp-nav__links" id="mp-nav-links">
@@ -456,6 +456,7 @@ layout: portfolio-base
     overlay.classList.add('open');
     overlay.removeAttribute('aria-hidden');
     document.body.style.overflow = 'hidden';
+    document.querySelector('main').setAttribute('aria-hidden', 'true');
     closeBtn.focus();
   }
 
@@ -463,16 +464,36 @@ layout: portfolio-base
     overlay.classList.remove('open');
     overlay.setAttribute('aria-hidden','true');
     document.body.style.overflow = '';
+    var main = document.querySelector('main'); if (main) main.removeAttribute('aria-hidden');
+    if (lastOpener) { lastOpener.focus(); lastOpener = null; }
   }
 
+  var lastOpener = null;
+
   document.querySelectorAll('.mp-proj-card').forEach(function(card){
-    card.addEventListener('click', function(){ openModal(this.dataset.modal); });
+    card.addEventListener('click', function(){ lastOpener = this; openModal(this.dataset.modal); });
     card.addEventListener('keydown', function(e){
-      if (e.key==='Enter'||e.key===' '){ e.preventDefault(); openModal(this.dataset.modal); }
+      if (e.key==='Enter'||e.key===' '){ e.preventDefault(); lastOpener = this; openModal(this.dataset.modal); }
     });
   });
   closeBtn.addEventListener('click', closeModal);
   overlay.addEventListener('click', function(e){ if(e.target===overlay) closeModal(); });
+
+  // Focus trap inside modal
+  document.addEventListener('keydown', function(e) {
+    if (!overlay.classList.contains('open') || e.key !== 'Tab') return;
+    var focusable = Array.from(overlay.querySelectorAll(
+      'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])'
+    )).filter(function(el) { return !el.disabled; });
+    if (focusable.length === 0) return;
+    var first = focusable[0];
+    var last  = focusable[focusable.length - 1];
+    if (e.shiftKey) {
+      if (document.activeElement === first) { e.preventDefault(); last.focus(); }
+    } else {
+      if (document.activeElement === last)  { e.preventDefault(); first.focus(); }
+    }
+  });
 
   // ── Navbar scroll shadow ──────────────────────────────────────────
   var nav = document.getElementById('mp-nav');
