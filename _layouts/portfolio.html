@@ -379,6 +379,39 @@ layout: portfolio-base
     }
   };
 
+  var LIFESTYLE = {
+    'ls-running': {
+      badge: '🏃 Running',
+      title: 'Running',
+      desc: 'My running journey — from first steps to races.',
+      color: '#E65100',
+      timeline: [
+        { date: '', title: 'Your milestone', desc: '', image: null },
+        { date: '', title: 'Your milestone', desc: '', image: null }
+      ]
+    },
+    'ls-badminton': {
+      badge: '🏸 Badminton',
+      title: 'Badminton',
+      desc: 'Weekly sessions, tournaments, and skill progression.',
+      color: '#1565C0',
+      timeline: [
+        { date: '', title: 'Your milestone', desc: '', image: null },
+        { date: '', title: 'Your milestone', desc: '', image: null }
+      ]
+    },
+    'ls-volunteer': {
+      badge: '🤝 Volunteer',
+      title: 'Volunteer',
+      desc: 'Community involvement, teaching, and giving back.',
+      color: '#2E7D32',
+      timeline: [
+        { date: '', title: 'Your milestone', desc: '', image: null },
+        { date: '', title: 'Your milestone', desc: '', image: null }
+      ]
+    }
+  };
+
   // ── Modal helpers ─────────────────────────────────────────────────
   var overlay  = document.getElementById('mp-modal-overlay');
   var closeBtn = document.getElementById('mp-modal-close');
@@ -390,41 +423,70 @@ layout: portfolio-base
   }
 
   function openModal(id) {
-    var p = PROJECTS[id]; if (!p) return;
-    document.getElementById('mp-modal-badge').textContent = p.badge;
+    var p = PROJECTS[id] || LIFESTYLE[id];
+    if (!p) return;
+
+    var badgeEl = document.getElementById('mp-modal-badge');
+    badgeEl.textContent = p.badge;
+    badgeEl.style.background = p.color || '';
+
     document.getElementById('mp-modal-title').textContent = p.title;
     document.getElementById('mp-modal-desc').textContent  = p.desc;
 
     document.getElementById('mp-modal-tags').innerHTML =
-      p.tags.map(function(t){ return '<span class="mp-tag">'+esc(t)+'</span>'; }).join('');
+      (p.tags||[]).map(function(t){ return '<span class="mp-tag">'+esc(t)+'</span>'; }).join('');
 
     var html = '';
-    if (p.stats) {
-      html += '<div class="mp-modal__stat-row">';
-      p.stats.forEach(function(s){
-        html += '<div class="mp-modal__stat">'
-              + '<span class="mp-modal__stat-value">'+esc(s.value)+'</span>'
-              + '<span class="mp-modal__stat-label">'+esc(s.label)+'</span>'
-              + '</div>';
+
+    if (p.timeline) {
+      html += '<div class="mp-timeline-list">';
+      p.timeline.forEach(function(entry){
+        html += '<div class="mp-timeline-entry" style="border-left-color:'+esc(p.color)+'">';
+        if (entry.image) {
+          html += '<img class="mp-timeline-entry__img" src="'+esc(entry.image)+'" alt="" loading="lazy">';
+        } else {
+          html += '<div class="mp-timeline-entry__placeholder">📷</div>';
+        }
+        html += '<div class="mp-timeline-entry__body">';
+        if (entry.date) {
+          html += '<span class="mp-timeline-entry__date" style="background:'+esc(p.color)+'">'+esc(entry.date)+'</span>';
+        }
+        html += '<p class="mp-timeline-entry__title">'+esc(entry.title)+'</p>';
+        if (entry.desc) {
+          html += '<p class="mp-timeline-entry__desc">'+esc(entry.desc)+'</p>';
+        }
+        html += '</div></div>';
       });
       html += '</div>';
-    }
-    (p.sections||[]).forEach(function(sec){
-      html += '<div class="mp-modal__section"><p class="mp-modal__section-title">'+esc(sec.title)+'</p><ul class="mp-modal__list">';
-      sec.items.forEach(function(item){
-        html += '<li>';
-        if (item.image) {
-          html += '<img class="mp-modal__list-item-img" src="'+esc(item.image)+'" alt="" loading="lazy">';
-        }
-        html += '<div class="mp-modal__list-item-body">';
-        html += item.link
-          ? '<a href="'+esc(item.link)+'" target="_blank" rel="noopener noreferrer">'+esc(item.text)+'</a>'
-          : esc(item.text);
-        if (item.sub) html += ' <em>— '+esc(item.sub)+'</em>';
-        html += '</div></li>';
+    } else {
+      if (p.stats) {
+        html += '<div class="mp-modal__stat-row">';
+        p.stats.forEach(function(s){
+          html += '<div class="mp-modal__stat">'
+                + '<span class="mp-modal__stat-value">'+esc(s.value)+'</span>'
+                + '<span class="mp-modal__stat-label">'+esc(s.label)+'</span>'
+                + '</div>';
+        });
+        html += '</div>';
+      }
+      (p.sections||[]).forEach(function(sec){
+        html += '<div class="mp-modal__section"><p class="mp-modal__section-title">'+esc(sec.title)+'</p><ul class="mp-modal__list">';
+        sec.items.forEach(function(item){
+          html += '<li>';
+          if (item.image) {
+            html += '<img class="mp-modal__list-item-img" src="'+esc(item.image)+'" alt="" loading="lazy">';
+          }
+          html += '<div class="mp-modal__list-item-body">';
+          html += item.link
+            ? '<a href="'+esc(item.link)+'" target="_blank" rel="noopener noreferrer">'+esc(item.text)+'</a>'
+            : esc(item.text);
+          if (item.sub) html += ' <em>— '+esc(item.sub)+'</em>';
+          html += '</div></li>';
+        });
+        html += '</ul></div>';
       });
-      html += '</ul></div>';
-    });
+    }
+
     document.getElementById('mp-modal-body').innerHTML = html;
 
     overlay.classList.add('open');
