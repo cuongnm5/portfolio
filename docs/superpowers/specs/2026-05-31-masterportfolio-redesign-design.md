@@ -119,9 +119,13 @@ All hero content: `opacity: 0 → 1`, `translateY(20px → 0)`, `0.6s ease`, on 
 **Background:** `#FFFFFF` (white, contrast with hero and projects)
 **Padding:** 80px 5%
 
+The section has three sub-sections stacked vertically, each with its own label + title + content:
+
+### 3a — Work Experience
+
 ```
-What I have done so far     ← section label (small orange caps)
-Work Experience             ← section title (2.2rem bold)
+What I have done so far     ← section label
+Work Experience             ← section title
 
 │ ● Research Intern                          Apr 2025 – Present
 │   HySonLab, University of Alabama · Remote
@@ -130,7 +134,7 @@ Work Experience             ← section title (2.2rem bold)
 │
 │ ● AI Engineer                              Feb 2020 – Present
 │   Zalo AI, VNG Corporation · Ho Chi Minh City
-│   • KiLM — Vietnamese LLM…
+│   • KiLM — Vietnamese LLM; 66.07 benchmark…
 │   • Python → Golang refactor: 500% throughput…
 │   • RAG system: Milvus + Elasticsearch + MinIO…
 │   • Kiki Auto — 80% TTS error reduction…
@@ -140,12 +144,52 @@ Work Experience             ← section title (2.2rem bold)
     • Led 100+ member club; AI/CS courses and competitions…
 ```
 
-**Timeline style:**
+### 3b — Education
+
+```
+Where I studied             ← section label
+Education                   ← section title
+
+┌──────────────────────────────────────────────────────┐
+│  🎓  Bachelor's in Information Technology            │
+│      Post & Telecommunication Institute of           │
+│      Technology (PTIT) · Hanoi, Vietnam              │
+│      Aug 2017 – Dec 2021  |  GPA: 3.16/4.0          │
+│                                                      │
+│      Thesis: Research to improve the quality of      │
+│      recommendation systems — Score: 10/10 (Top 0.01%)│
+└──────────────────────────────────────────────────────┘
+```
+
+Education uses a single wide card (not timeline) with a 🎓 icon, border-left orange accent.
+
+### 3c — Certifications
+
+```
+What I have achieved        ← section label
+Certifications              ← section title
+
+┌──────────────────────────────────────────────────────┐
+│  📜  Certifications coming soon                      │
+│      Check back for professional credentials and     │
+│      online course completions.                      │
+└──────────────────────────────────────────────────────┘
+```
+
+Placeholder card with dashed border and muted text — same structure as Education card, easy to populate later.
+
+**Timeline style (Work Experience):**
 - Vertical line: 2px, `linear-gradient(#E65100, #FFB347, transparent)`
 - Dot: 14px circle, `#E65100`, ring shadow `rgba(230,81,0,0.2)`
 - Card: background `#FFF8F0`, border `1px solid #FDE8D8`, border-radius 14px
 - Card hover: `box-shadow: 0 4px 20px rgba(230,81,0,0.12)`
 - Org text: `#E65100`, font-weight 600
+
+**Education / Certification card style:**
+- White background, border-radius 14px, border-left 4px solid `#E65100`
+- Box-shadow: `0 2px 12px rgba(0,0,0,0.07)`
+- Icon: 48px emoji in orange-tinted circle (`#FFF0E6` bg)
+- Max-width 700px, centered
 
 ---
 
@@ -240,8 +284,7 @@ Placeholder gradient: `#FFF0E0 → #FFD9B0` (warm orange tones to match new pale
 
 - Lottie animation (user chose circle photo)
 - Skills section
-- Education section
-- Certifications section
+
 - Blogs section
 - Contact form / footer contact
 - i18n / multi-language
