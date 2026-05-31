@@ -70,7 +70,7 @@ layout: portfolio-base
 <!-- ================================================================
      EXPERIENCE
      ================================================================ -->
-<section id="experience" class="mp-section mp-section--white">
+<section id="experience" class="mp-section mp-section--warm">
   <div class="mp-section__inner">
     <p class="mp-section__label">What I have done so far</p>
     <h2 class="mp-section__title">Experience</h2>
@@ -322,12 +322,16 @@ layout: portfolio-base
      ================================================================ -->
 <div class="mp-modal-overlay" id="mp-modal-overlay" aria-hidden="true">
   <div class="mp-modal" role="dialog" aria-modal="true" aria-labelledby="mp-modal-title">
-    <button class="mp-modal__close" id="mp-modal-close" aria-label="Close">✕</button>
-    <span class="mp-modal__badge" id="mp-modal-badge"></span>
-    <h2 class="mp-modal__title" id="mp-modal-title"></h2>
-    <p class="mp-modal__desc"  id="mp-modal-desc"></p>
-    <div class="mp-modal__tags" id="mp-modal-tags"></div>
-    <div id="mp-modal-body"></div>
+    <div class="mp-modal__header">
+      <button class="mp-modal__close" id="mp-modal-close" aria-label="Close">✕</button>
+      <span class="mp-modal__badge" id="mp-modal-badge"></span>
+      <h2 class="mp-modal__title" id="mp-modal-title"></h2>
+      <div class="mp-modal__tags" id="mp-modal-tags"></div>
+    </div>
+    <div class="mp-modal__body">
+      <p class="mp-modal__desc" id="mp-modal-desc"></p>
+      <div id="mp-modal-body"></div>
+    </div>
   </div>
 </div>
 
