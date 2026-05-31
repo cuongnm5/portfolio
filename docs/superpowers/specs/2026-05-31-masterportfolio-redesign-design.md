@@ -198,34 +198,110 @@ Placeholder card with dashed border and muted text — same structure as Educati
 **Background:** `#FFF8F0` (warm off-white)
 **Padding:** 80px 5%
 
-```
-What I have built           ← section label
-Projects                    ← section title
-
-┌─────────────────────────────────────────┐
-│ ▬▬▬▬ gradient bar (orange → amber)     │  ← 5px top bar
-│ [NeurIPS 2025 · Submitted]              │  ← badge chip
-│ TeBaAb — Antibody Redesign             │  ← title
-│ Text-based antigen-conditioned…         │  ← desc
-│ [Drug Discovery] [Bioinformatics] [Py] │  ← tags
-│ View details →                          │  ← orange CTA
-└─────────────────────────────────────────┘
-```
-
 **Grid:** 2-column desktop, 1-column mobile.
 **Card:** white, border-radius 14px, box-shadow `0 2px 12px rgba(0,0,0,0.08)`
 **Gradient bar:** `linear-gradient(90deg, #E65100, #FFB347)` — 5px height
 **Hover:** `translateY(-4px)` + deeper orange shadow
-**Click:** opens existing detail modal (draft placeholder)
+**Click:** opens detail modal with full content (see modal spec per project below)
 
-All 5 projects shown:
-1. TeBaAb (NeurIPS 2025 · Submitted)
-2. Vietnamese TTS (🥇 VLSP 2020 · 1st Prize)
-3. Vietnamese-English CS TTS (PRICAI 2021 · Q2)
-4. Neural News Recommendation (ACIIDS 2022 · Q2)
-5. Recommendation System (Bachelor's Thesis · 10/10)
+### 4 projects displayed:
 
-**Detail modal** — unchanged from current implementation (MD3 orange modal).
+---
+
+#### Project 1 — Text-to-Speech (Vietnamese TTS)
+
+**Card:**
+- Badge: `🥇 VLSP 2020 · 1st Prize`
+- Title: `Vietnamese Text-to-Speech`
+- Desc: End-to-end Vietnamese TTS system (Tacotron-2 + HiFiGAN + WaveGlow). Achieved MOS 3.77/4.22 — best result at VLSP 2020. Research papers accepted at PRICAI 2021 (Q2).
+- Tags: `TTS` · `Deep Learning` · `Speech Synthesis` · `Python`
+- Gradient bar: `#E65100 → #FF8C00`
+
+**Detail modal content:**
+- Description: Full project write-up on Vietnamese TTS pipeline
+- Publications:
+  - "Development of Smartcall Vietnamese TTS for VLSP 2020" — VLSP 2020 (ACL)
+  - "Vietnamese-English Code-Switching Speech Synthesis" — PRICAI 2021 (Q2)
+  - "Multi-task Text Normalization for Speech Synthesis" — PRICAI 2021 (Q2)
+- 📰 Press: [Znews — Vietnamese AI Research Recognized Internationally](https://znews.vn/nghien-cuu-ve-ai-cua-nhom-ky-su-viet-duoc-cong-nhan-cap-quoc-te-post1281985.html)
+- Key quote from article: *"The gap between Vietnam and the world in AI is narrowing."*
+
+---
+
+#### Project 2 — AI Greeting Card (Zalo AI)
+
+**Card:**
+- Badge: `Zalo AI · 3.7M Cards Created`
+- Title: `AI Greeting Card — Zalo`
+- Desc: AI-powered greeting card product on Zalo generating personalized poetry, lyrics and rap. Refactored service Python→Golang (+500% throughput). 3.7M cards, 1.7M users in Women's Day 2025 campaign alone.
+- Tags: `Golang` · `Python` · `LLM` · `Production`
+- Gradient bar: `#FF8C00 → #FFD700`
+
+**Detail modal content:**
+- Description: AI card generation service at Zalo AI. Integrated with KiLM (Vietnamese LLM). Refactored backend Python→Golang yielding 500% concurrent user throughput gain.
+- 📰 Press:
+  - [Znews — 3.7 Million AI Cards on Zalo for March 8](https://znews.vn/gan-4-trieu-tam-thiep-ai-duoc-tao-ra-tren-zalo-trong-dip-83-post1539259.html)
+  - [LinkedIn post](https://www.linkedin.com/feed/update/urn:li:ugcPost:7258038391957528576/)
+- Stats: 3.7M cards · 1.7M users · 4× YoY growth · 3× engagement vs prior year
+
+---
+
+#### Project 3 — Cosmic Corner (Side Project)
+
+**Card:**
+- Badge: `Side Project · Live`
+- Title: `Cosmic Corner 🌙`
+- Desc: Vietnamese esoteric learning platform — AI-powered tarot readings, tea leaf divination, horoscope & natal charts, 78-card flashcard system. Freemium with community features.
+- Tags: `AI` · `Full Stack` · `Vietnamese` · `Side Project`
+- Gradient bar: `#7B2FBE → #E65100`
+
+**Detail modal content:**
+- Description: Personal side project combining traditional Vietnamese spirituality with modern AI. Built end-to-end: AI interpretation engine, card library, e-commerce shop.
+- 🔗 Live site: [cosmic-corner.io.vn](https://cosmic-corner.io.vn/)
+- Features: AI tarot · tea leaf divination · horoscope · 78-card flashcards · quizzes · shop
+
+---
+
+#### Project 4 — AI in Medical Domain (Side Project / Research)
+
+**Card:**
+- Badge: `Research · HySonLab`
+- Title: `AI for Medicine & Drug Discovery`
+- Desc: Research on antibody redesign (TeBaAb, NeurIPS 2025 Workshop) and a comprehensive review of efficient deep learning for medical imaging — bridging high-performance AI and clinical deployment.
+- Tags: `Drug Discovery` · `Medical AI` · `Deep Learning` · `Research`
+- Gradient bar: `#E65100 → #FFB347`
+
+**Detail modal content:**
+- Publications:
+  - **TeBaAb**: "Text-based antigen-conditioned antibody redesign" — submitted to NeurIPS 2025 Workshop; aiming to publish in Oxford Journal. (Cuong Manh Nguyen, Huy-Hoang Do-Huu, Viet Thanh Duy Nguyen, Truong-Son Hy)
+  - **Review**: "Efficient Deep Learning for Medical Imaging: Bridging the Gap Between High-Performance AI and Clinical Deployment" — arXiv:2602.00910 (Cuong Manh Nguyen, Truong-Son Hy)
+- 🔗 Links: [arXiv:2602.00910](https://arxiv.org/abs/2602.00910)
+- Lab: HySonLab, University of Alabama at Birmingham (Prof. Truong-Son Hy)
+
+---
+
+### Detail Modal — updated structure
+
+Each project's modal now shows:
+```
+[badge chip]
+[project title]                          [✕ close]
+[description paragraph]
+[tags row]
+
+📄 Publications (if any)
+   • Paper title — Venue (Year)  [link]
+
+📰 Press / References (if any)
+   • Article title [link]
+
+🔗 Links (if any)
+   • Live site / arXiv / LinkedIn
+
+[ Draft note if content incomplete ]
+```
+
+No longer shows generic "draft coming soon" for projects with real content.
 
 ---
 
