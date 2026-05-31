@@ -356,7 +356,7 @@ layout: portfolio-base
           { text: 'Multi-Task Text Normalization for Speech Synthesis', sub: 'PRICAI 2021 · Springer LNAI · Q2', link: null }
         ]},
         { title: '📰 Press', items: [
-          { text: 'Vietnamese AI Research Recognized at International Conference', sub: 'Znews — PRICAI 2021 coverage', link: 'https://znews.vn/nghien-cuu-ve-ai-cua-nhom-ky-su-viet-duoc-cong-nhan-cap-quoc-te-post1281985.html' }
+          { text: 'Vietnamese AI Research Recognized at International Conference', sub: 'Znews — PRICAI 2021 coverage', link: 'https://znews.vn/nghien-cuu-ve-ai-cua-nhom-ky-su-viet-duoc-cong-nhan-cap-quoc-te-post1281985.html', image: '{{ site.baseurl }}/images/press/znews-tts.jpg' }
         ]}
       ]
     },
@@ -373,8 +373,8 @@ layout: portfolio-base
       ],
       sections: [
         { title: '📰 Press', items: [
-          { text: 'Nearly 4 Million AI Cards Created on Zalo for Women\'s Day', sub: 'Znews', link: 'https://znews.vn/gan-4-trieu-tam-thiep-ai-duoc-tao-ra-tren-zalo-trong-dip-83-post1539259.html' },
-          { text: 'LinkedIn — Campaign highlight post', sub: 'LinkedIn', link: 'https://www.linkedin.com/feed/update/urn:li:ugcPost:7258038391957528576/' }
+          { text: 'Nearly 4 Million AI Cards Created on Zalo for Women\'s Day', sub: 'Znews', link: 'https://znews.vn/gan-4-trieu-tam-thiep-ai-duoc-tao-ra-tren-zalo-trong-dip-83-post1539259.html', image: '{{ site.baseurl }}/images/press/znews-aicard.jpg' },
+          { text: 'LinkedIn — Campaign highlight post', sub: 'LinkedIn', link: 'https://www.linkedin.com/feed/update/urn:li:ugcPost:7258038391957528576/', image: '{{ site.baseurl }}/images/press/linkedin-aicard.jpg' }
         ]}
       ]
     },
@@ -447,11 +447,15 @@ layout: portfolio-base
       html += '<div class="mp-modal__section"><p class="mp-modal__section-title">'+esc(sec.title)+'</p><ul class="mp-modal__list">';
       sec.items.forEach(function(item){
         html += '<li>';
+        if (item.image) {
+          html += '<img class="mp-modal__list-item-img" src="'+esc(item.image)+'" alt="" loading="lazy">';
+        }
+        html += '<div class="mp-modal__list-item-body">';
         html += item.link
           ? '<a href="'+esc(item.link)+'" target="_blank" rel="noopener noreferrer">'+esc(item.text)+'</a>'
           : esc(item.text);
         if (item.sub) html += ' <em>— '+esc(item.sub)+'</em>';
-        html += '</li>';
+        html += '</div></li>';
       });
       html += '</ul></div>';
     });

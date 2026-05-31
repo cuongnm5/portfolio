@@ -736,6 +736,11 @@ body.mp-page .mp-modal__title           { color: var(--mp-text); }
   object-fit: cover;
   border-radius: 6px;
   flex-shrink: 0;
+
+  @media (max-width: 600px) {
+    width: 80px;
+    height: 55px;
+  }
 }
 
 .mp-modal__list-item-body {
