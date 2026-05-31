@@ -246,73 +246,39 @@ layout: portfolio-base
   <div class="mp-section__inner">
     <p class="mp-section__label">Life outside code</p>
     <h2 class="mp-section__title">Lifestyle</h2>
-    <p class="mp-lifestyle__intro">When I'm not training models, I'm training myself.</p>
+    <div class="mp-proj-grid">
 
-    <div class="mp-photo-grid">
-
-      <div class="mp-photo-card mp-photo-card--tall">
-        <img class="mp-photo-card__img"
-             src="{{ site.baseurl }}/images/run_wp.png"
-             alt="Running and marathon training">
-        <div class="mp-photo-card__body">
-          <p class="mp-photo-card__activity">🏃 Running</p>
-          <p class="mp-photo-card__caption">Marathon training &amp; road races</p>
+      <div class="mp-proj-card" role="button" tabindex="0" data-modal="ls-running">
+        <div class="mp-proj-card__bar"></div>
+        <div class="mp-proj-card__body">
+          <span class="mp-proj-card__badge">🏃 Sport</span>
+          <h3 class="mp-proj-card__title">Running</h3>
+          <p class="mp-proj-card__desc">Marathon training, road races &amp; endurance milestones.</p>
+          <span class="mp-proj-card__cta">View journey →</span>
         </div>
       </div>
 
-      <!-- PLACEHOLDER: swap with <img class="mp-photo-card__img" src="{{ site.baseurl }}/images/trekking.jpg" alt="Trekking"> -->
-      <div class="mp-photo-card">
-        <div class="mp-photo-placeholder">
-          <span class="mp-placeholder-icon">🏔</span>
-          <span class="mp-placeholder-hint">Add trekking photo</span>
-        </div>
-        <div class="mp-photo-card__body">
-          <p class="mp-photo-card__activity">🏔 Trekking</p>
-          <p class="mp-photo-card__caption">Into the mountains</p>
+      <div class="mp-proj-card" role="button" tabindex="0" data-modal="ls-badminton">
+        <div class="mp-proj-card__bar" style="background:linear-gradient(90deg,#1565C0,#42A5F5);"></div>
+        <div class="mp-proj-card__body">
+          <span class="mp-proj-card__badge" style="background:#E3F2FD;color:#1565C0;">🏸 Sport</span>
+          <h3 class="mp-proj-card__title">Badminton</h3>
+          <p class="mp-proj-card__desc">Weekly sessions, local tournaments &amp; continuous improvement.</p>
+          <span class="mp-proj-card__cta" style="color:#1565C0;">View journey →</span>
         </div>
       </div>
 
-      <!-- PLACEHOLDER: swap with <img class="mp-photo-card__img" src="{{ site.baseurl }}/images/badminton.jpg" alt="Badminton"> -->
-      <div class="mp-photo-card">
-        <div class="mp-photo-placeholder">
-          <span class="mp-placeholder-icon">🏸</span>
-          <span class="mp-placeholder-hint">Add badminton photo</span>
-        </div>
-        <div class="mp-photo-card__body">
-          <p class="mp-photo-card__activity">🏸 Badminton</p>
-          <p class="mp-photo-card__caption">Weekly smash sessions</p>
-        </div>
-      </div>
-
-      <div class="mp-photo-card mp-photo-card--wide">
-        <img class="mp-photo-card__img"
-             src="{{ site.baseurl }}/images/mc.jpg"
-             alt="Marathon race highlight">
-        <div class="mp-photo-card__body">
-          <p class="mp-photo-card__activity">🏅 Marathon</p>
-          <p class="mp-photo-card__caption">Race day highlights</p>
-        </div>
-      </div>
-
-      <!-- PLACEHOLDER: swap with your photo -->
-      <div class="mp-photo-card">
-        <div class="mp-photo-placeholder">
-          <span class="mp-placeholder-icon">🌿</span>
-          <span class="mp-placeholder-hint">Add more photos</span>
-        </div>
-        <div class="mp-photo-card__body">
-          <p class="mp-photo-card__activity">🌿 More Adventures</p>
-          <p class="mp-photo-card__caption">Life in motion</p>
+      <div class="mp-proj-card" role="button" tabindex="0" data-modal="ls-volunteer">
+        <div class="mp-proj-card__bar" style="background:linear-gradient(90deg,#2E7D32,#81C784);"></div>
+        <div class="mp-proj-card__body">
+          <span class="mp-proj-card__badge" style="background:#E8F5E9;color:#2E7D32;">🤝 Community</span>
+          <h3 class="mp-proj-card__title">Volunteer</h3>
+          <p class="mp-proj-card__desc">Teaching, organising &amp; giving back beyond code.</p>
+          <span class="mp-proj-card__cta" style="color:#2E7D32;">View journey →</span>
         </div>
       </div>
 
     </div>
-
-    <p class="mp-photo-hint">
-      📸 Drop photos into <code>/images/</code> and swap the placeholder
-      <code>&lt;div&gt;</code> blocks with
-      <code>&lt;img class="mp-photo-card__img"&gt;</code>
-    </p>
 
   </div>
 </section>
