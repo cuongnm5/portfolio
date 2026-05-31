@@ -13,6 +13,9 @@ body.mp-page {
   --mp-muted:     #777777;
   --mp-border:    #FDE8D8;
 
+  // Reset global blog link color so mp- classes control their own colors
+  a { color: inherit; text-decoration: none; }
+
   font-family: 'Roboto', sans-serif;
   background: var(--mp-bg);
   color: var(--mp-text);
@@ -79,7 +82,7 @@ body.mp-page {
   border-radius: 8px;
   font-size: 0.9rem;
   font-weight: 500;
-  color: var(--mp-muted);
+  color: var(--mp-text);
   text-decoration: none;
   cursor: pointer;
   transition: background 0.2s, color 0.2s;
@@ -87,7 +90,7 @@ body.mp-page {
   border: none;
   font-family: 'Roboto', sans-serif;
 
-  &:hover { background: var(--mp-accent); color: #fff; }
+  &:hover { background: var(--mp-primary); color: #fff; }
   &.active { font-weight: 700; color: var(--mp-primary); }
 }
 
