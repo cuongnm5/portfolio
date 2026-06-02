@@ -253,7 +253,7 @@ layout: portfolio-base
         <div class="mp-proj-card__body">
           <span class="mp-proj-card__badge">🏃 Sport</span>
           <h3 class="mp-proj-card__title">Running</h3>
-          <p class="mp-proj-card__desc">Marathon training, road races &amp; endurance milestones.</p>
+          <!-- <p class="mp-proj-card__desc">Marathon training, road races &amp; endurance milestones.</p> -->
           <span class="mp-proj-card__cta">View journey →</span>
         </div>
       </div>
@@ -263,7 +263,7 @@ layout: portfolio-base
         <div class="mp-proj-card__body">
           <span class="mp-proj-card__badge" style="background:#E3F2FD;color:#1565C0;">🏸 Sport</span>
           <h3 class="mp-proj-card__title">Badminton</h3>
-          <p class="mp-proj-card__desc">Weekly sessions, local tournaments &amp; continuous improvement.</p>
+          <!-- <p class="mp-proj-card__desc">Weekly sessions, local tournaments &amp; continuous improvement.</p> -->
           <span class="mp-proj-card__cta" style="color:#1565C0;">View journey →</span>
         </div>
       </div>
@@ -273,7 +273,7 @@ layout: portfolio-base
         <div class="mp-proj-card__body">
           <span class="mp-proj-card__badge" style="background:#E8F5E9;color:#2E7D32;">🤝 Community</span>
           <h3 class="mp-proj-card__title">Volunteer</h3>
-          <p class="mp-proj-card__desc">Teaching, organising &amp; giving back beyond code.</p>
+          <!-- <p class="mp-proj-card__desc">Teaching, organising &amp; giving back beyond code.</p> -->
           <span class="mp-proj-card__cta" style="color:#2E7D32;">View journey →</span>
         </div>
       </div>
@@ -299,6 +299,15 @@ layout: portfolio-base
       <div id="mp-modal-body"></div>
     </div>
   </div>
+</div>
+
+<!-- Lightbox overlay for full-size image viewing -->
+<div id="mp-lightbox" aria-hidden="true" role="dialog" aria-modal="true" aria-label="Image viewer">
+  <button id="mp-lightbox-close" aria-label="Close image">✕</button>
+  <button id="mp-lightbox-prev" aria-label="Previous image">&#8249;</button>
+  <img id="mp-lightbox-img" src="" alt="">
+  <button id="mp-lightbox-next" aria-label="Next image">&#8250;</button>
+  <span id="mp-lightbox-counter"></span>
 </div>
 
 <!-- ================================================================
@@ -383,59 +392,66 @@ layout: portfolio-base
     'ls-running': {
       badge: '🏃 Running',
       title: 'Running',
-      desc: 'From first steps in 2020 to 100K ultra trails — road, trail & marathon milestones.',
       color: '#E65100',
+      groupBy: 'category',
+      stats: [
+        { value: '20:45',    label: '5 KM' },
+        { value: '47:11',    label: '10 KM' },
+        { value: '1:41:50',  label: 'Half Marathon' },
+        { value: '3:57:23',  label: 'Full Marathon' },
+        { value: '✓',        label: '100 KM Trail Finisher' }
+      ],
       timeline: [
-        { date: 'Mar 2026', title: 'Măng Đen LaLa Trail — 100K',                             desc: '100K ultra trail ⛰️',                        images: [] },
-        { date: 'Dec 2025', title: 'UpRace Day 2025 — Half Marathon',                        desc: '',                                           images: [] },
-        { date: 'Aug 2025', title: 'VNG x ASICS Run Club — 10K',                             desc: '',                                           images: [] },
-        { date: 'Jan 2025', title: 'PV GAS Half-Marathon 2025 — Half Marathon',              desc: 'First sub-1:45 half marathon 🎯',            images: [] },
-        { date: 'Dec 2024', title: 'Cần Thơ Heritage Marathon 2024 — Full Marathon',         desc: 'First sub-4:00 marathon 🎯',                 images: [] },
-        { date: 'Dec 2024', title: 'Cát Tiên Jungle Path 2024 — 70K',                        desc: '',                                           images: [] },
-        { date: 'Dec 2024', title: 'Techcombank International Marathon 2024 — Full Marathon', desc: '',                                           images: [] },
-        { date: 'Nov 2024', title: 'Color Run Smile 2024 — 5K',                              desc: '',                                           images: [] },
-        { date: 'Oct 2024', title: 'District 1 Midnight 2024 — 5K',                          desc: '',                                           images: [] },
-        { date: 'May 2024', title: 'Trekking Pha Luông',                                     desc: 'The edge of the sky ⛰️',                     images: [] },
-        { date: 'May 2024', title: 'The Lakes Race — 25K',                                   desc: '',                                           images: [] },
-        { date: 'Apr 2024', title: 'VPBank Music Night Run Cần Thơ 2024 — Half Marathon',    desc: '',                                           images: [] },
-        { date: 'Mar 2024', title: 'Da Lat Ultra Trail 2024 — 120K',                         desc: 'DNF — but I\'ll be back 💪',                 images: [] },
-        { date: 'Dec 2023', title: 'Techcombank HCMC Marathon — Half Marathon',              desc: '',                                           images: [] },
-        { date: 'Oct 2023', title: 'UpRace Day 2023 — 10K',                                  desc: '',                                           images: [] },
-        { date: 'Oct 2023', title: 'VPBank International Marathon 2023 — Half Marathon',      desc: '',                                           images: [] },
-        { date: 'Aug 2023', title: 'VnExpress Marathon Marvelous Nha Trang 2023 — Full Marathon', desc: '',                                      images: [] },
-        { date: 'Jun 2023', title: 'VnExpress Marathon Sparkling Quy Nhơn 2023 — Full Marathon', desc: '',                                       images: [] },
-        { date: 'Jun 2023', title: 'The Lakes Race — 15K',                                   desc: '',                                           images: [] },
-        { date: 'May 2023', title: 'FulBright Fun Run 2023 — 5K',                            desc: '',                                           images: [] },
-        { date: 'Apr 2023', title: 'Lazada Run 2023 — Half Marathon',                        desc: 'First sub-2:00 half marathon 🎯',            images: [] },
-        { date: 'Mar 2023', title: 'Da Lat Ultra Trail 2023 — 55K',                          desc: 'First ultra trail race ⛰️',                  images: [] },
-        { date: 'Nov 2022', title: 'Đất Sen Hồng Marathon 2022 — Full Marathon',             desc: 'First full marathon 🏅',                     images: [] },
-        { date: 'Oct 2022', title: 'UpRace Day 2022 — 10K',                                  desc: '',                                           images: [] },
-        { date: 'Oct 2022', title: 'Viettel Fastest 2022 — 10K',                             desc: 'Semi-Pro',                                   images: [] },
-        { date: 'Sep 2022', title: 'Intel Tech Fun Run 2022 — 10K',                          desc: '',                                           images: [] },
-        { date: 'Sep 2022', title: 'TMG Hoi An Discovery Marathon — 25K',                    desc: 'First race 🎉',                              images: [] },
-        { date: 'Apr 2022', title: 'Joined VNG Run Club',                                    desc: 'Found my running community 🧡',              images: [] },
-        { date: 'Apr 2021', title: 'Trekking Fansipan',                                      desc: 'Roof of Indochina — 3,143m ⛰️',              images: [] },
-        { date: 'Feb 2020', title: 'Started running',                                        desc: 'Where the journey began 🏃',                 images: [] }
+        { date: 'Mar 2026', title: 'Măng Đen LaLa Trail — 100K',                              category: 'Trail',    images: ['/portfolio/images/activity/lala.PNG','/portfolio/images/activity/lala3.PNG'] },
+        { date: 'Dec 2024', title: 'Cát Tiên Jungle Path 2024 — 70K',                         category: 'Trail',    images: ['/portfolio/images/activity/nct.jpg','/portfolio/images/activity/nct-2.jpg'] },
+        { date: 'Mar 2024', title: 'Da Lat Ultra Trail 2024 — 120K',                          category: 'Trail',    images: ['/portfolio/images/activity/dlut1121.JPG', '/portfolio/images/activity/dlut1122.JPG'] },
+        { date: 'Mar 2023', title: 'Da Lat Ultra Trail 2023 — 55K',                           category: 'Trail',    images: ['/portfolio/images/activity/dlut551.JPG', '/portfolio/images/activity/dlut552.JPG'] },
+        { date: 'Dec 2025', title: 'UpRace Day 2025 — Half Marathon',                         category: 'Road',     images: [] },
+        { date: 'Aug 2025', title: 'VNG x ASICS Run Club — 10K',                              category: 'Road',     images: [] },
+        { date: 'Jan 2025', title: 'PV GAS Half-Marathon 2025 — Half Marathon',               category: 'Road',     images: ['/portfolio/images/activity/gas.PNG'] },
+        { date: 'Dec 2024', title: 'Cần Thơ Heritage Marathon 2024 — Full Marathon',          category: 'Road',     images: ['/portfolio/images/activity/cantho1.JPG', '/portfolio/images/activity/cantho2.JPG'] },
+        { date: 'Dec 2024', title: 'Techcombank International Marathon 2024 — Full Marathon',  category: 'Road',     images: ['/portfolio/images/activity/tcb2.jpeg'] },
+        { date: 'Nov 2024', title: 'Color Run Smile 2024 — 5K',                               category: 'Road',     images: [] },
+        { date: 'Oct 2024', title: 'District 1 Midnight 2024 — 5K',                           category: 'Road',     images: ['/portfolio/images/activity/midnight.JPG'] },
+        { date: 'May 2024', title: 'The Lakes Race — 25K',                                    category: 'Road',     images: [] },
+        { date: 'Apr 2024', title: 'VPBank Music Night Run Cần Thơ 2024 — Half Marathon',     category: 'Road',     images: ['/portfolio/images/activity/vpb.jpeg'] },
+        { date: 'Dec 2023', title: 'Techcombank HCMC Marathon — Half Marathon',               category: 'Road',     images: ['/portfolio/images/activity/tcb.PNG'] },
+        { date: 'Oct 2023', title: 'UpRace Day 2023 — 10K',                                   category: 'Road',     images: [] },
+        { date: 'Oct 2023', title: 'VPBank International Marathon 2023 — Half Marathon',       category: 'Road',     images: [] },
+        { date: 'Aug 2023', title: 'VnExpress Marathon Marvelous Nha Trang 2023 — Full Marathon', category: 'Road', images: ['/portfolio/images/activity/nhatrang1.JPG', '/portfolio/images/activity/nhatrang2.JPG'] },
+        { date: 'Jun 2023', title: 'VnExpress Marathon Sparkling Quy Nhơn 2023 — Full Marathon',  category: 'Road', images: ['/portfolio/images/activity/quynhon.JPG'] },
+        { date: 'Jun 2023', title: 'The Lakes Race — 15K',                                    category: 'Road',     images: [] },
+        { date: 'May 2023', title: 'FulBright Fun Run 2023 — 5K',                             category: 'Road',     images: [] },
+        { date: 'Apr 2023', title: 'Lazada Run 2023 — Half Marathon',                         category: 'Road',     images: ['/portfolio/images/activity/lzd.jpeg'] },
+        { date: 'Nov 2022', title: 'Đất Sen Hồng Marathon 2022 — Full Marathon',              category: 'Road',     images: ['/portfolio/images/activity/dsh.JPG'] },
+        { date: 'Oct 2022', title: 'UpRace Day 2022 — 10K',                                   category: 'Road',     images: ['/portfolio/images/activity/uprace.jpeg'] },
+        { date: 'Oct 2022', title: 'Viettel Fastest 2022 — 10K',                              category: 'Road',     images: ['/portfolio/images/activity/vt.jpeg'] },
+        { date: 'Sep 2022', title: 'Intel Tech Fun Run 2022 — 10K',                           category: 'Road',     images: [] },
+        { date: 'Sep 2022', title: 'TMG Hoi An Discovery Marathon — 25K',                     category: 'Road',    images: ['/portfolio/images/activity/running-1.JPG'] },
+        { date: 'Apr 2022', title: 'Joined VNG Run Club',                                     category: 'Road',     images: ['/portfolio/images/activity/vng1.JPG','/portfolio/images/activity/vng2.JPG','/portfolio/images/activity/vng3.JPG','/portfolio/images/activity/vng4.JPG','/portfolio/images/activity/vng5.JPG','/portfolio/images/activity/vng6.JPG'] },
+        { date: 'Feb 2020', title: 'Started running',                                         category: 'Road',     images: [] },
+        { date: 'May 2024', title: 'Trekking Pha Luông',                                      category: 'Trekking', images: ['/portfolio/images/activity/phaluong.JPG', '/portfolio/images/activity/phaluong2.JPG'] },
+        { date: 'Apr 2021', title: 'Trekking Fansipan',                                       category: 'Trekking', images: [] }
       ]
     },
     'ls-badminton': {
       badge: '🏸 Badminton',
       title: 'Badminton',
-      desc: 'From picking up the racket in 2024 to tournament podiums.',
       color: '#1565C0',
+      groupBy: 'flat',
       timeline: [
-        { date: 'Oct 2025', title: 'VNG Badminton Championships 2025',                      desc: 'Top 2 · Series B · Men\'s Doubles 🥈',       images: [] },
-        { date: 'Mar 2024', title: 'Started playing badminton',                             desc: 'Picked up the racket 🏸',                    images: [] }
+        { date: 'Oct 2025', title: 'VNG Badminton Championships 2025 — Top 2 · Series B · Men\'s Doubles 🥈', images: ['/portfolio/images/activity/badminton-1.jpeg','/portfolio/images/activity/badminton-2.JPG'] },
+        { date: 'Mar 2024', title: 'Started playing badminton 🏸', images: [] }
       ]
     },
     'ls-volunteer': {
       badge: '🤝 Volunteer',
       title: 'Volunteer',
-      desc: 'Giving back beyond code — children\'s festivals and non-profit journeys.',
       color: '#2E7D32',
+      groupBy: 'flat',
       timeline: [
-        { date: 'Dec 2024', title: 'Nuôi Em — Children in Cambodia',                        desc: 'Visited Vietnamese children in Cambodia with the Nuôi Em non-profit 🤝', images: [] },
-        { date: 'Jul 2017', title: 'Lighting Up Vietnamese Childhood',                      desc: 'Group leader · Mid-Autumn Festival for children 🏮', images: [] }
+        { date: 'Dec 2024', title: 'Nuôi Em — Children in Cambodia 🤝', images: ['/portfolio/images/activity/cam1.jpeg','/portfolio/images/activity/cam2.JPG','/portfolio/images/activity/cam3.JPG','/portfolio/images/activity/cam4.JPG'] },
+        { date: 'Jul 2017', title: 'Lighting Up Vietnamese Childhood — Group leader · Mid-Autumn Festival 🏮', images: [] }
       ]
     }
   };
@@ -468,55 +484,87 @@ layout: portfolio-base
     var html = '';
 
     if (p.timeline) {
-      // Group entries by year (data is already newest-first)
+      // Stats (personal records) above the timeline
+      if (p.stats) {
+        html += '<div class="mp-modal__stat-row">';
+        p.stats.forEach(function(s){
+          html += '<div class="mp-modal__stat">'
+                + '<span class="mp-modal__stat-value">'+esc(s.value)+'</span>'
+                + '<span class="mp-modal__stat-label">'+esc(s.label)+'</span>'
+                + '</div>';
+        });
+        html += '</div>';
+      }
+
+      function renderEntry(entry) {
+        var imgs = entry.images || [];
+        var hasImages = imgs.length > 0;
+        var out = '<div class="mp-timeline-entry'+(hasImages?' is-expandable':'')+'" style="border-left-color:'+esc(p.color)+'">';
+        out += '<div class="mp-timeline-entry__head"'+(hasImages?' role="button" tabindex="0" aria-expanded="false"':'')+'>';
+        out += '<div class="mp-timeline-entry__body">';
+        if (entry.date) {
+          out += '<span class="mp-timeline-entry__date" style="background:'+esc(p.color)+'">'+esc(entry.date)+'</span>';
+        }
+        out += '<p class="mp-timeline-entry__title">'+esc(entry.title)+'</p>';
+        out += '</div>';
+        if (hasImages) {
+          out += '<span class="mp-timeline-entry__toggle">'
+               + '<span class="mp-timeline-entry__count">'+imgs.length+' 📷</span>'
+               + '<span class="mp-timeline-entry__chevron" aria-hidden="true">▾</span>'
+               + '</span>';
+        }
+        out += '</div>'; // head
+        if (hasImages) {
+          out += '<div class="mp-timeline-entry__gallery" hidden>';
+          imgs.forEach(function(src){
+            out += '<img class="mp-timeline-entry__img" src="'+esc(src)+'" alt="'+esc(entry.title)+'" loading="lazy">';
+          });
+          out += '</div>';
+        }
+        out += '</div>'; // entry
+        return out;
+      }
+
       var groups = [];
-      p.timeline.forEach(function(entry){
-        var year = (String(entry.date).match(/\d{4}/) || [''])[0];
-        var last = groups[groups.length - 1];
-        if (!last || last.year !== year) { last = { year: year, entries: [] }; groups.push(last); }
-        last.entries.push(entry);
-      });
+      if (p.groupBy === 'flat') {
+        groups = [{ label: '', flat: true, entries: p.timeline }];
+      } else if (p.groupBy === 'category') {
+        var catOrder = ['Trail', 'Road', 'Trekking'];
+        var catMap = {};
+        p.timeline.forEach(function(entry){
+          var cat = entry.category || 'Other';
+          if (!catMap[cat]) catMap[cat] = { label: cat, entries: [] };
+          catMap[cat].entries.push(entry);
+        });
+        catOrder.forEach(function(cat){ if (catMap[cat]) groups.push(catMap[cat]); });
+        Object.keys(catMap).forEach(function(cat){
+          if (catOrder.indexOf(cat) === -1) groups.push(catMap[cat]);
+        });
+      } else {
+        // Default: group by year
+        p.timeline.forEach(function(entry){
+          var year = (String(entry.date).match(/\d{4}/) || [''])[0];
+          var last = groups[groups.length - 1];
+          if (!last || last.label !== year) { last = { label: year, entries: [] }; groups.push(last); }
+          last.entries.push(entry);
+        });
+      }
 
       html += '<div class="mp-timeline-list">';
       groups.forEach(function(group){
-        html += '<div class="mp-timeline-year-group">';
-        html += '<div class="mp-timeline-year" role="button" tabindex="0" aria-expanded="false">';
-        html += '<span class="mp-timeline-year__label">'+esc(group.year)+'</span>';
-        html += '<span class="mp-timeline-year__chevron" aria-hidden="true">▾</span>';
-        html += '</div>'; // year button
-        html += '<div class="mp-timeline-year__entries" hidden>';
-        group.entries.forEach(function(entry){
-          var imgs = entry.images || [];
-          var hasImages = imgs.length > 0;
-          html += '<div class="mp-timeline-entry'+(hasImages?' is-expandable':'')+'" style="border-left-color:'+esc(p.color)+'">';
-          html += '<div class="mp-timeline-entry__head"'+(hasImages?' role="button" tabindex="0" aria-expanded="false"':'')+'>';
-          html += '<div class="mp-timeline-entry__body">';
-          if (entry.date) {
-            html += '<span class="mp-timeline-entry__date" style="background:'+esc(p.color)+'">'+esc(entry.date)+'</span>';
-          }
-          html += '<p class="mp-timeline-entry__title">'+esc(entry.title)+'</p>';
-          if (entry.desc) {
-            html += '<p class="mp-timeline-entry__desc">'+esc(entry.desc)+'</p>';
-          }
+        if (group.flat) {
+          group.entries.forEach(function(entry){ html += renderEntry(entry); });
+        } else {
+          html += '<div class="mp-timeline-year-group">';
+          html += '<div class="mp-timeline-year" role="button" tabindex="0" aria-expanded="false">';
+          html += '<span class="mp-timeline-year__label">'+esc(group.label)+'</span>';
+          html += '<span class="mp-timeline-year__chevron" aria-hidden="true">▾</span>';
           html += '</div>';
-          if (hasImages) {
-            html += '<span class="mp-timeline-entry__toggle">'
-                  + '<span class="mp-timeline-entry__count">'+imgs.length+' 📷</span>'
-                  + '<span class="mp-timeline-entry__chevron" aria-hidden="true">▾</span>'
-                  + '</span>';
-          }
-          html += '</div>'; // head
-          if (hasImages) {
-            html += '<div class="mp-timeline-entry__gallery" hidden>';
-            imgs.forEach(function(src){
-              html += '<img class="mp-timeline-entry__img" src="'+esc(src)+'" alt="'+esc(entry.title)+'" loading="lazy">';
-            });
-            html += '</div>';
-          }
-          html += '</div>'; // entry
-        });
-        html += '</div>'; // year entries
-        html += '</div>'; // year group
+          html += '<div class="mp-timeline-year__entries" hidden>';
+          group.entries.forEach(function(entry){ html += renderEntry(entry); });
+          html += '</div>';
+          html += '</div>';
+        }
       });
       html += '</div>';
     } else {
@@ -623,6 +671,57 @@ layout: portfolio-base
     } else {
       if (document.activeElement === last)  { e.preventDefault(); first.focus(); }
     }
+  });
+
+  // ── Lightbox ─────────────────────────────────────────────────────
+  var lightbox        = document.getElementById('mp-lightbox');
+  var lightboxImg     = document.getElementById('mp-lightbox-img');
+  var lightboxClose   = document.getElementById('mp-lightbox-close');
+  var lightboxPrev    = document.getElementById('mp-lightbox-prev');
+  var lightboxNext    = document.getElementById('mp-lightbox-next');
+  var lightboxCounter = document.getElementById('mp-lightbox-counter');
+  var lbImages = [];
+  var lbIndex  = 0;
+
+  function showLightboxAt(idx) {
+    lbIndex = (idx + lbImages.length) % lbImages.length;
+    var img = lbImages[lbIndex];
+    lightboxImg.src = img.src;
+    lightboxImg.alt = img.alt || '';
+    lightboxCounter.textContent = (lbIndex + 1) + ' / ' + lbImages.length;
+    lightboxPrev.style.display = lbImages.length > 1 ? '' : 'none';
+    lightboxNext.style.display = lbImages.length > 1 ? '' : 'none';
+    lightboxCounter.style.display = lbImages.length > 1 ? '' : 'none';
+  }
+  function openLightbox(clickedImg) {
+    var gallery = clickedImg.closest('.mp-timeline-entry__gallery');
+    lbImages = gallery ? Array.from(gallery.querySelectorAll('.mp-timeline-entry__img')) : [clickedImg];
+    lbIndex  = lbImages.indexOf(clickedImg);
+    showLightboxAt(lbIndex);
+    lightbox.classList.add('open');
+    lightbox.removeAttribute('aria-hidden');
+    document.body.style.overflow = 'hidden';
+    lightboxClose.focus();
+  }
+  function closeLightbox() {
+    lightbox.classList.remove('open');
+    lightbox.setAttribute('aria-hidden', 'true');
+    document.body.style.overflow = '';
+  }
+
+  document.addEventListener('click', function(e) {
+    var img = e.target.closest('.mp-timeline-entry__img');
+    if (img) { e.stopPropagation(); openLightbox(img); }
+  });
+  lightboxClose.addEventListener('click', closeLightbox);
+  lightboxPrev.addEventListener('click', function(e) { e.stopPropagation(); showLightboxAt(lbIndex - 1); });
+  lightboxNext.addEventListener('click', function(e) { e.stopPropagation(); showLightboxAt(lbIndex + 1); });
+  lightbox.addEventListener('click', function(e) { if (e.target === lightbox) closeLightbox(); });
+  document.addEventListener('keydown', function(e) {
+    if (!lightbox.classList.contains('open')) return;
+    if (e.key === 'Escape')      closeLightbox();
+    if (e.key === 'ArrowLeft')   showLightboxAt(lbIndex - 1);
+    if (e.key === 'ArrowRight')  showLightboxAt(lbIndex + 1);
   });
 
   // ── Navbar scroll shadow ──────────────────────────────────────────
